@@ -58,31 +58,11 @@ void main_cycle(void)
         CLK_GPIO_Port->ODR ^= CLK_Pin;
         WAIT();
 
-        if ((GPIOA->IDR & 3U) == 0x00) {
-            // set data pin to output
-            GPIOC->MODER = moder_output;
+        // set data pin to analog(high impedence)
+        GPIOA->MODER = moder_analog;
 
-            address = GPIOB->IDR;
-            GPIOC->ODR = (uint32_t)rom_data[address];
-#ifdef PRINT
-            HAL_Delay(PERIOD);
-            if (address != address_prev) {
-                printf("\n%x,%x", address, rom_data[address]);
-                address_prev = address;
-            }
-#endif
-        } else {
-            // set data pin to analog(high impedence)
-            GPIOA->MODER = moder_analog;
-
-#ifdef PRINT
-            HAL_Delay(PERIOD);
-            address = (GPIOB->IDR & 0x77f7) | (GPIOC->IDR & 0x0808);
-            if ((GPIOC->IDR & 0x01) && (address != address_prev)) {
-                printf("\n%x", address | ((uint16_t)(GPIOC->IDR & 0x01) << 15));
-                address_prev = address;
-            }
-#endif
-        }
+        HAL_Delay(PERIOD);
+        address = GPIOB->IDR;
+        printf("\n%x", address);
     }
 }
