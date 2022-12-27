@@ -100,6 +100,7 @@ int main(void)
   MX_USB_DEVICE_Init();
   MX_I2C1_Init();
   MX_TIM2_Init();
+  MX_I2C3_Init();
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
 
