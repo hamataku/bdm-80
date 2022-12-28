@@ -1,0 +1,5 @@
+xpt2046.c:94:16:besttwoavg	12	static
+xpt2046.c:70:17:XPT2046_Read_AD	24	static
+xpt2046.c:121:6:XPT2046_Init	0	static
+xpt2046.c:126:6:XPT2046_Update	48	static
+xpt2046.c:165:9:XPT2046_IsReasonable	0	static

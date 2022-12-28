@@ -1,0 +1,6 @@
+LogoPresenter.hpp:28:13:LogoPresenter::~LogoPresenter()	0	static
+LogoPresenter.cpp:10:6:virtual void LogoPresenter::activate()	0	static
+LogoPresenter.hpp:28:13:virtual LogoPresenter::~LogoPresenter()	8	static
+LogoPresenter.hpp:28:13:virtual void* LogoPresenter::_ZThn4_N13LogoPresenterD1Ev()	0	static
+LogoPresenter.hpp:28:13:virtual void* LogoPresenter::_ZThn4_N13LogoPresenterD0Ev()	16	static
+LogoPresenter.cpp:4:1:LogoPresenter::LogoPresenter(LogoView&)	8	static

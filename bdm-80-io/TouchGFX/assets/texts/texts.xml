@@ -5,6 +5,62 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_4AKZ" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_J1C9" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">F</Translation>
+      </Text>
+      <Text Id="__SingleUse_IJGT" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">E</Translation>
+      </Text>
+      <Text Id="__SingleUse_MEPQ" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">D</Translation>
+      </Text>
+      <Text Id="__SingleUse_9ZC7" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">C</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z4C9" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">B</Translation>
+      </Text>
+      <Text Id="__SingleUse_VDEA" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">A</Translation>
+      </Text>
+      <Text Id="__SingleUse_26U0" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_C9AB" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_0F7E" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_HUC5" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_WE88" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_D5SU" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_94BI" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_YG6E" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_BLF7" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_BLDW" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_4SKY" Alignment="Center" TypographyId="Large">
+        <Translation Language="GB">BDM-80</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />

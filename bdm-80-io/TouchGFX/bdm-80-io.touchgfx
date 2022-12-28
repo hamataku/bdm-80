@@ -2,19 +2,640 @@
   "Application": {
     "Screens": [
       {
-        "Name": "Screen1",
+        "Name": "Logo",
         "Components": [
           {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 133,
-            "Y": 103,
-            "Width": 55,
-            "Height": 17,
-            "RelativeFilename": "aillis.png"
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 320,
+            "Height": 240
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "textureMapper1",
+            "X": 160,
+            "Y": 30,
+            "Width": 80,
+            "Height": 80,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "Scale": 1.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 80,
+            "Y": 96,
+            "Width": 161,
+            "Height": 49,
+            "TextId": "__SingleUse_4SKY",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
           }
         ],
-        "Interactions": []
+        "Interactions": [
+          {
+            "InteractionName": "wait",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenEntered"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 1000
+            }
+          },
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "wait"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionWipe",
+              "ScreenTransitionDirection": "West",
+              "ActionComponent": "Main"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Main",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 320,
+            "Height": 240
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bf",
+            "X": 180,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_J1C9",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "be",
+            "X": 120,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_IJGT",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bd",
+            "X": 60,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_MEPQ",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bc",
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_9ZC7",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bb",
+            "X": 180,
+            "Y": 60,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_Z4C9",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "ba",
+            "X": 120,
+            "Y": 60,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_VDEA",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b9",
+            "X": 60,
+            "Y": 60,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_C9AB",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b8",
+            "Y": 60,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_0F7E",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b7",
+            "X": 180,
+            "Y": 120,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_HUC5",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b6",
+            "X": 120,
+            "Y": 120,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_WE88",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b5",
+            "X": 60,
+            "Y": 120,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_D5SU",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b4",
+            "Y": 120,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_94BI",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b3",
+            "X": 180,
+            "Y": 180,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_YG6E",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b2",
+            "X": 120,
+            "Y": 180,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_BLF7",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b1",
+            "X": 60,
+            "Y": 180,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_BLDW",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b0",
+            "Y": 180,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Blue_Buttons_Square_icon_button_pressed.png",
+            "Released": "__designer\\Blue_Buttons_Square_icon_button.png",
+            "TextId": "__SingleUse_26U0",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Style": "Style9",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 247,
+            "Width": 60,
+            "Height": 60,
+            "Pressed": "__designer\\Dark_Buttons_Round_Edge_icon_button_pressed.png",
+            "Released": "__designer\\Dark_Buttons_Round_Edge_icon_button.png",
+            "TextId": "__SingleUse_4AKZ",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "b0",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b0"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b0_callback"
+            }
+          },
+          {
+            "InteractionName": "b1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b1_callback"
+            }
+          },
+          {
+            "InteractionName": "b2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b2"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b2_callback"
+            }
+          },
+          {
+            "InteractionName": "b3",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b3"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b3_callback"
+            }
+          },
+          {
+            "InteractionName": "b4",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b4"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b4_callback"
+            }
+          },
+          {
+            "InteractionName": "b5",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b5"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b5_callback"
+            }
+          },
+          {
+            "InteractionName": "b6",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b6"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b6_callback"
+            }
+          },
+          {
+            "InteractionName": "b8",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b8"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b8_callback"
+            }
+          },
+          {
+            "InteractionName": "b9",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b9"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b9_callback"
+            }
+          },
+          {
+            "InteractionName": "ba",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "ba"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "ba_callback"
+            }
+          },
+          {
+            "InteractionName": "bb",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bb"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "bb_callback"
+            }
+          },
+          {
+            "InteractionName": "bc",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bc"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "bc_callback"
+            }
+          },
+          {
+            "InteractionName": "bd",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bd"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "bd_callback"
+            }
+          },
+          {
+            "InteractionName": "be",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "be"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "be_callback"
+            }
+          },
+          {
+            "InteractionName": "bf",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "bf"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "bf_callback"
+            }
+          },
+          {
+            "InteractionName": "b7",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "b7"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "b7_callback"
+            }
+          }
+        ]
       }
     ],
     "CustomContainerDefinitions": [],
@@ -24,7 +645,7 @@
       "Height": 240
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "Screen1",
+    "StartupScreenName": "Logo",
     "SelectedStartupLanguage": "GB",
     "Skin": "Blue",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",

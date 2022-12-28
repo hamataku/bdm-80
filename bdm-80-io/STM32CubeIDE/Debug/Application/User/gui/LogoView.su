@@ -1,0 +1,6 @@
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+LogoView.hpp:11:13:LogoView::~LogoView()	0	static
+LogoView.cpp:13:6:virtual void LogoView::tearDownScreen()	0	static
+LogoView.cpp:8:6:virtual void LogoView::setupScreen()	0	static
+LogoView.hpp:11:13:virtual LogoView::~LogoView()	8	static
+LogoView.cpp:3:1:LogoView::LogoView()	8	static
