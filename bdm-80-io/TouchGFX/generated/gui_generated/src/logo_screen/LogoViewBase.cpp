@@ -14,7 +14,7 @@ LogoViewBase::LogoViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 320, 240);
-    box1.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
+    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
 
     textureMapper1.setXY(160, 30);
     textureMapper1.setWidth(80);
@@ -27,15 +27,21 @@ LogoViewBase::LogoViewBase() :
     textureMapper1.setAngles(0.0f, 0.0f, 0.0f);
     textureMapper1.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
 
-    textArea1.setXY(80, 96);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea1.setXY(78, 79);
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(148, 148, 148));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4SKY));
+
+    textArea2.setXY(116, 162);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(148, 148, 148));
+    textArea2.setLinespacing(0);
+    textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZM3U));
 
     add(__background);
     add(box1);
     add(textureMapper1);
     add(textArea1);
+    add(textArea2);
 }
 
 void LogoViewBase::setupScreen()

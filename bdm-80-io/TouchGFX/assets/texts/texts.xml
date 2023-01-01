@@ -6,55 +6,85 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
-      <Text Id="__SingleUse_4AKZ" Alignment="Center" TypographyId="Default">
+      <Text Id="__SingleUse_4LNC" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">STEP</Translation>
+      </Text>
+      <Text Id="__SingleUse_AMXG" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">WRITE&#10;INCR</Translation>
+      </Text>
+      <Text Id="__SingleUse_FCNM" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">READ&#10;DECR</Translation>
+      </Text>
+      <Text Id="__SingleUse_TT4Y" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">READ&#10;INCR</Translation>
+      </Text>
+      <Text Id="__SingleUse_UD6S" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">ADRS&#10;SET</Translation>
+      </Text>
+      <Text Id="__SingleUse_80VW" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RESET</Translation>
+      </Text>
+      <Text Id="__SingleUse_61B9" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">LOAD</Translation>
+      </Text>
+      <Text Id="__SingleUse_8CQT" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">STORE</Translation>
+      </Text>
+      <Text Id="__SingleUse_F7SQ" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">RUN</Translation>
       </Text>
-      <Text Id="__SingleUse_J1C9" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_ZM3U" Alignment="Left" TypographyId="Small">
+        <Translation Language="GB">Hamataku Lab</Translation>
+      </Text>
+      <Text Id="__SingleUse_4AKZ" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RET</Translation>
+      </Text>
+      <Text Id="__SingleUse_J1C9" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">F</Translation>
       </Text>
-      <Text Id="__SingleUse_IJGT" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_IJGT" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">E</Translation>
       </Text>
-      <Text Id="__SingleUse_MEPQ" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_MEPQ" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">D</Translation>
       </Text>
-      <Text Id="__SingleUse_9ZC7" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_9ZC7" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">C</Translation>
       </Text>
-      <Text Id="__SingleUse_Z4C9" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_Z4C9" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">B</Translation>
       </Text>
-      <Text Id="__SingleUse_VDEA" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_VDEA" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">A</Translation>
       </Text>
-      <Text Id="__SingleUse_26U0" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_26U0" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">0</Translation>
       </Text>
-      <Text Id="__SingleUse_C9AB" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_C9AB" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">9</Translation>
       </Text>
-      <Text Id="__SingleUse_0F7E" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_0F7E" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">8</Translation>
       </Text>
-      <Text Id="__SingleUse_HUC5" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_HUC5" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">7</Translation>
       </Text>
-      <Text Id="__SingleUse_WE88" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_WE88" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">6</Translation>
       </Text>
-      <Text Id="__SingleUse_D5SU" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_D5SU" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">5</Translation>
       </Text>
-      <Text Id="__SingleUse_94BI" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_94BI" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">4</Translation>
       </Text>
-      <Text Id="__SingleUse_YG6E" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_YG6E" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">3</Translation>
       </Text>
-      <Text Id="__SingleUse_BLF7" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_BLF7" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">2</Translation>
       </Text>
-      <Text Id="__SingleUse_BLDW" Alignment="Center" TypographyId="Large">
+      <Text Id="__SingleUse_BLDW" Alignment="Center" TypographyId="Normal">
         <Translation Language="GB">1</Translation>
       </Text>
       <Text Id="__SingleUse_4SKY" Alignment="Center" TypographyId="Large">
@@ -63,8 +93,8 @@
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="tazugane.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Normal" Font="tazugane.ttf" Size="35" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="tazugane.ttf" Size="11" Bpp="1" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

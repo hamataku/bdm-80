@@ -1,4 +1,5 @@
-tm1630.c:66:6:TM1630_WriteByte	24	static
-tm1630.c:37:6:TM1630_SetDisplay	24	static,ignoring_inline_asm
-tm1630.c:14:6:TM1630_Init	8	static
-tm1630.c:27:6:TM1630_SetNumber	4	static
+tm1630.c:73:6:TM1630_WriteByteSeg1	24	static
+tm1630.c:89:6:TM1630_WriteByteSeg2	24	static
+tm1630.c:41:6:TM1630_SetSeg1	16	static,ignoring_inline_asm
+tm1630.c:57:6:TM1630_SetSeg2	16	static,ignoring_inline_asm
+tm1630.c:14:6:TM1630_Init	16	static

@@ -19,7 +19,7 @@ enable_language(CXX)
 enable_language(ASM)
 
 # project name and language to use
-project(iris CXX)
+project(bdm-80-rom CXX)
 string(ASCII 27 Esc)
 if(CMAKE_BUILD_TYPE STREQUAL "")
     set(CMAKE_BUILD_TYPE Release)

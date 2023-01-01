@@ -9,6 +9,9 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/Button.hpp>
+#include <touchgfx/widgets/ToggleButton.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/mixins/ClickListener.hpp>
 
 class MainViewBase : public touchgfx::View<MainPresenter>
@@ -128,6 +131,17 @@ protected:
     touchgfx::ButtonWithLabel b1;
     touchgfx::ClickListener< touchgfx::ButtonWithLabel > b0;
     touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1_1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1_1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1_1_1;
+    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1_1_1_1;
+    touchgfx::Button button1;
+    touchgfx::ToggleButton toggleButton1_1;
+    touchgfx::TextArea textArea1;
 
 private:
 

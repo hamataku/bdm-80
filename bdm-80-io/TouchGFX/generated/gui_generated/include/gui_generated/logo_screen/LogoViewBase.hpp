@@ -32,6 +32,7 @@ protected:
     touchgfx::Box box1;
     touchgfx::TextureMapper textureMapper1;
     touchgfx::TextArea textArea1;
+    touchgfx::TextArea textArea2;
 
 private:
 

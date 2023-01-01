@@ -7,8 +7,9 @@
 #include "rom.h"
 #include "gpio.h"
 #include "stm32f4xx_it.h"
+#include "usart.h"
 
-#define PERIOD 500
+#define PERIOD 5
 #define PRINT
 
 uint32_t moder_output = 0;
@@ -53,16 +54,17 @@ void main_init(void)
 void main_cycle(void)
 {
     uint16_t address = 0;
-    uint16_t address_prev = 0;
     while (1) {
         CLK_GPIO_Port->ODR ^= CLK_Pin;
-        WAIT();
 
-        // set data pin to analog(high impedence)
-        GPIOA->MODER = moder_analog;
+        GPIOC->MODER = moder_analog;
+
+        address = GPIOB->IDR;
+        GPIO_PinState rd = HAL_GPIO_ReadPin(RD_GPIO_Port, RD_Pin);
+        GPIO_PinState wr = HAL_GPIO_ReadPin(WR_GPIO_Port, WR_Pin);
+        GPIO_PinState mreq = HAL_GPIO_ReadPin(MREQ_GPIO_Port, MREQ_Pin);
+        printf("address=%x, rd=%d, wr=%d, mreq=%d\n", address, rd, wr, mreq);
 
         HAL_Delay(PERIOD);
-        address = GPIOB->IDR;
-        printf("\n%x", address);
     }
 }

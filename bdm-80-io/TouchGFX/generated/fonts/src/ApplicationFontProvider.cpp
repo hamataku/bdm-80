@@ -9,14 +9,14 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
 {
     switch (typography)
     {
-    case Typography::DEFAULT:
-        // verdana_20_4bpp
-        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
     case Typography::LARGE:
-        // verdana_40_4bpp
+        // tazugane_40_4bpp
+        return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[0]);
+    case Typography::NORMAL:
+        // tazugane_35_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[1]);
     case Typography::SMALL:
-        // verdana_10_4bpp
+        // tazugane_11_1bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[2]);
     default:
         return 0;

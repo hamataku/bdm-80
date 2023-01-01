@@ -1,0 +1,2 @@
+Table_tazugane_11_1bpp.cpp:48:165:void __tcf_0()	0	static
+Table_tazugane_11_1bpp.cpp:46:26:touchgfx::GeneratedFont& getFont_tazugane_11_1bpp()	64	static

@@ -64,6 +64,7 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ButtonWithLabel.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
  C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h \
  ../../Core/Inc/main.h \
@@ -91,8 +92,6 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h \
- ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h \
- ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
@@ -239,6 +238,8 @@ Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
 
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
+
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
 
 C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
@@ -292,10 +293,6 @@ C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h:
-
-../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c.h:
-
-../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_i2c_ex.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h:
 
