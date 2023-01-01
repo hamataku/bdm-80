@@ -9,7 +9,7 @@
 #include "stm32f4xx_it.h"
 #include "usart.h"
 
-#define PERIOD 5
+#define PERIOD 500
 #define PRINT
 
 uint32_t moder_output = 0;
