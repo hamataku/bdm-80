@@ -9,7 +9,7 @@
 #include "tim.h"
 #include "clock.h"
 
-#define DEBUG
+// #define DEBUG
 
 uint32_t moder_output = 0;
 uint32_t moder_input = 0;
@@ -123,6 +123,9 @@ void main_callback(void)
 
 void main_setFrequency(uint32_t freq)
 {
+    freq = freq > 2000000 ? 2000000 : freq;
+    freq = freq < 1 ? 1 : freq;
     uint32_t period = (uint32_t)(1000000 / freq);
     __HAL_TIM_SetAutoreload(&htim2, period);
+    printf("freq %lu\n", freq);
 }

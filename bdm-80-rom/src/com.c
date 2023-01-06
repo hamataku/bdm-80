@@ -64,7 +64,6 @@ void com_update()
         case 'f': {
             uint32_t freq = (uint32_t)strtol((char*)&receive[1], NULL, 10);
             main_setFrequency(freq);
-            printf("freq %lu\n", freq);
             break;
         }
         default:
