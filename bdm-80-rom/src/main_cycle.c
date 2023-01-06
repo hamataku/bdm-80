@@ -123,9 +123,9 @@ void main_callback(void)
 
 void main_setFrequency(uint32_t freq)
 {
-    freq = freq > 2000000 ? 2000000 : freq;
+    freq = freq > 1000000 ? 1000000 : freq;
     freq = freq < 1 ? 1 : freq;
-    uint32_t period = (uint32_t)(1000000 / freq);
+    uint32_t period = (uint32_t)(2000000 / freq) - 1;
     __HAL_TIM_SetAutoreload(&htim2, period);
     printf("freq %lu\n", freq);
 }

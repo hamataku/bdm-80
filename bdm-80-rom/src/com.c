@@ -26,10 +26,13 @@ void com_init()
 void com_update()
 {
     if (received) {
-        HAL_TIM_Base_Stop_IT(&htim2);
+        __set_BASEPRI(3 << 4);
         switch (receive[0]) {
         case 'r':
             main_reset();
+            break;
+        case 'R':
+            HAL_NVIC_SystemReset();
             break;
         case 'h':
             printf("halt\n");
@@ -71,7 +74,7 @@ void com_update()
         }
         received = false;
         memset(receive, 0, sizeof(receive));
-        HAL_TIM_Base_Start_IT(&htim2);
+        __set_BASEPRI(0);
     }
 }
 
