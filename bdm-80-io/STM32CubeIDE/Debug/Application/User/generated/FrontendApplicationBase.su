@@ -40,10 +40,16 @@ WipeTransition.hpp:44:11:virtual touchgfx::WipeTransition<touchgfx::WEST>::FullS
 Transition.hpp:88:18:virtual void touchgfx::Transition::invalidate()	8	static
 WipeTransition.hpp:89:18:void touchgfx::WipeTransition<templateDirection>::handleTickEvent() [with touchgfx::Direction templateDirection = touchgfx::WEST]	48	static
 MVPApplication.hpp:59:18:virtual void touchgfx::MVPApplication::handlePendingScreenTransition()	16	static
-FrontendApplicationBase.cpp:19:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
-FrontendApplicationBase.cpp:36:6:void FrontendApplicationBase::gotoLogoScreenNoTransition()	0	static
-FrontendApplicationBase.cpp:49:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()	0	static
+FrontendApplicationBase.cpp:21:1:FrontendApplicationBase::FrontendApplicationBase(Model&, FrontendHeap&)	24	static
+FrontendApplicationBase.cpp:38:6:void FrontendApplicationBase::gotoLogoScreenNoTransition()	0	static
+FrontendApplicationBase.cpp:51:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()	0	static
+FrontendApplicationBase.cpp:62:6:void FrontendApplicationBase::gotoMainScreenNoTransition()	0	static
+FrontendApplicationBase.cpp:75:6:void FrontendApplicationBase::gotoSettingScreenNoTransition()	0	static
 MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = LogoView; PresenterType = LogoPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
-FrontendApplicationBase.cpp:42:6:void FrontendApplicationBase::gotoLogoScreenNoTransitionImpl()	16	static
+FrontendApplicationBase.cpp:44:6:void FrontendApplicationBase::gotoLogoScreenNoTransitionImpl()	16	static
 MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::WipeTransition<touchgfx::WEST>; ModelType = Model]	40	static
-FrontendApplicationBase.cpp:55:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()	16	static
+FrontendApplicationBase.cpp:57:6:void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()	16	static
+MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = MainView; PresenterType = MainPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
+FrontendApplicationBase.cpp:68:6:void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()	16	static
+MVPApplication.hpp:161:16:PresenterType* touchgfx::makeTransition(touchgfx::Screen**, touchgfx::Presenter**, touchgfx::MVPHeap&, touchgfx::Transition**, ModelType*) [with ScreenType = SettingView; PresenterType = SettingPresenter; TransType = touchgfx::NoTransition; ModelType = Model]	40	static
+FrontendApplicationBase.cpp:81:6:void FrontendApplicationBase::gotoSettingScreenNoTransitionImpl()	16	static

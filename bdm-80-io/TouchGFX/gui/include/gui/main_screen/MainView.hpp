@@ -3,7 +3,10 @@
 
 #include <gui_generated/main_screen/MainViewBase.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
+
+#ifndef SIMULATOR
 #include "tm1630.h"
+#endif
 
 class MainView : public MainViewBase
 {
@@ -15,6 +18,7 @@ public:
 
 protected:
     uint16_t counter = 0;
+#ifndef SIMULATOR
     void b0_callback() override
     {
         counter = counter << 4;
@@ -96,6 +100,7 @@ protected:
         counter = (counter << 4) + 15;
         TM1630_SetSeg1(counter);
     }
+#endif
 };
 
 #endif  // MAINVIEW_HPP

@@ -8,11 +8,13 @@
 extern touchgfx::GeneratedFont& getFont_tazugane_40_4bpp();
 extern touchgfx::GeneratedFont& getFont_tazugane_35_4bpp();
 extern touchgfx::GeneratedFont& getFont_tazugane_11_1bpp();
+extern touchgfx::GeneratedFont& getFont_tazugane_15_4bpp();
 
 const touchgfx::Font* touchgfx_fonts[] = {
     &(getFont_tazugane_40_4bpp()),
     &(getFont_tazugane_35_4bpp()),
-    &(getFont_tazugane_11_1bpp())
+    &(getFont_tazugane_11_1bpp()),
+    &(getFont_tazugane_15_4bpp())
 };
 
 extern const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[];
@@ -20,6 +22,35 @@ extern const touchgfx::TypedText::TypedTextData* const typedTextDatabaseArray[];
 
 TEXT_LOCATION_FLASH_PRAGMA
 const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCATION_FLASH_ATTRIBUTE = {
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
+    { 1, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 2, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
@@ -91,6 +122,9 @@ void resetFont(touchgfx::FontId fontId)
         break;
     case 2:
         touchgfx_fonts[2] = &(getFont_tazugane_11_1bpp());
+        break;
+    case 3:
+        touchgfx_fonts[3] = &(getFont_tazugane_15_4bpp());
         break;
     }
 }

@@ -23,8 +23,8 @@ void TM1630_Init(void)
     TM1630_WriteByteSeg2(0x40);
     HAL_GPIO_WritePin(SEG2_STB_GPIO_Port, SEG2_STB_Pin, GPIO_PIN_SET);
 
-    TM1630_SetSeg1(0);
-    TM1630_SetSeg2(0);
+    TM1630_SetSeg1(10);
+    TM1630_SetSeg2(10);
 }
 
 void TM1630_SetBrightness(uint8_t brightness)

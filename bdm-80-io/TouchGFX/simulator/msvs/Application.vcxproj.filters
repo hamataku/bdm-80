@@ -196,6 +196,18 @@
     <Filter Include="Header Files\generated\gui_generated\logo_screen">
       <UniqueIdentifier>6C741CB4-975C-EF26-82AD-23287B50378A</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\setting_screen">
+      <UniqueIdentifier>DCE4399C-EEF4-4E09-383B-D1D7177F2D62</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\setting_screen">
+      <UniqueIdentifier>75F78F64-C6BF-8863-8FC1-B5D539AD724B</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\setting_screen">
+      <UniqueIdentifier>15A24F27-643A-0892-D27E-8FF8E69FD486</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\setting_screen">
+      <UniqueIdentifier>09D11978-329B-9A2E-8F68-BC72021CB2F8</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -245,6 +257,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\main_screen\MainViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\main_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\setting_screen\SettingPresenter.cpp">
+      <Filter>Source Files\gui\setting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\setting_screen\SettingView.cpp">
+      <Filter>Source Files\gui\setting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\setting_screen\SettingViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\setting_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -705,6 +726,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\main_screen\MainViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\main_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\setting_screen\SettingPresenter.hpp">
+      <Filter>Header Files\gui\setting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\setting_screen\SettingView.hpp">
+      <Filter>Header Files\gui\setting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\setting_screen\SettingViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\setting_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

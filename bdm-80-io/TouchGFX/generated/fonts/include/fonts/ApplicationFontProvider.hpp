@@ -16,6 +16,7 @@ struct Typography
     static const touchgfx::FontId LARGE = 0;
     static const touchgfx::FontId NORMAL = 1;
     static const touchgfx::FontId SMALL = 2;
+    static const touchgfx::FontId MEDIUM = 3;
 };
 
 struct TypographyFontIndex
@@ -23,7 +24,8 @@ struct TypographyFontIndex
     static const touchgfx::FontId LARGE = 0;  // tazugane_40_4bpp
     static const touchgfx::FontId NORMAL = 1; // tazugane_35_4bpp
     static const touchgfx::FontId SMALL = 2;  // tazugane_11_1bpp
-    static const uint16_t NUMBER_OF_FONTS = 3;
+    static const touchgfx::FontId MEDIUM = 3; // tazugane_15_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 4;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

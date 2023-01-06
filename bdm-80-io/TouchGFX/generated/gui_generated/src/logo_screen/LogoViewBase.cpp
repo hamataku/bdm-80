@@ -14,7 +14,7 @@ LogoViewBase::LogoViewBase() :
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
 
     box1.setPosition(0, 0, 320, 240);
-    box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    box1.setColor(touchgfx::Color::getColorFromRGB(247, 247, 247));
 
     textureMapper1.setXY(160, 30);
     textureMapper1.setWidth(80);

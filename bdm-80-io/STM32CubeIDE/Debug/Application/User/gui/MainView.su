@@ -1,24 +1,33 @@
 Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-MainView.hpp:12:13:MainView::~MainView()	0	static
+MainViewBase.hpp:107:18:virtual void MainViewBase::ret_callback()	0	static
+MainViewBase.hpp:112:18:virtual void MainViewBase::run_callback()	0	static
+MainViewBase.hpp:117:18:virtual void MainViewBase::function1()	0	static
+MainViewBase.hpp:122:18:virtual void MainViewBase::load_callback()	0	static
+MainViewBase.hpp:127:18:virtual void MainViewBase::reset_callback()	0	static
+MainViewBase.hpp:132:18:virtual void MainViewBase::adrs_callback()	0	static
+MainViewBase.hpp:137:18:virtual void MainViewBase::read_incr_callback()	0	static
+MainViewBase.hpp:142:18:virtual void MainViewBase::read_decr_callback()	0	static
+MainViewBase.hpp:147:18:virtual void MainViewBase::write_incr_callback()	0	static
+MainView.hpp:15:13:MainView::~MainView()	0	static
 MainView.cpp:13:6:virtual void MainView::tearDownScreen()	0	static
 MainView.cpp:8:6:virtual void MainView::setupScreen()	0	static
-MainView.hpp:54:10:virtual void MainView::b7_callback()	0	static
-MainView.hpp:94:10:virtual void MainView::bf_callback()	0	static
-MainView.hpp:89:10:virtual void MainView::be_callback()	0	static
-MainView.hpp:84:10:virtual void MainView::bd_callback()	0	static
-MainView.hpp:79:10:virtual void MainView::bc_callback()	0	static
-MainView.hpp:74:10:virtual void MainView::bb_callback()	0	static
-MainView.hpp:69:10:virtual void MainView::ba_callback()	0	static
-MainView.hpp:64:10:virtual void MainView::b9_callback()	0	static
-MainView.hpp:59:10:virtual void MainView::b8_callback()	0	static
-MainView.hpp:49:10:virtual void MainView::b6_callback()	0	static
-MainView.hpp:44:10:virtual void MainView::b5_callback()	0	static
-MainView.hpp:39:10:virtual void MainView::b4_callback()	0	static
-MainView.hpp:34:10:virtual void MainView::b3_callback()	0	static
-MainView.hpp:29:10:virtual void MainView::b2_callback()	0	static
-MainView.hpp:18:10:virtual void MainView::b0_callback()	0	static
-MainView.hpp:23:10:virtual void MainView::b1_callback()	8	static
-MainView.hpp:12:13:virtual MainView::~MainView()	8	static
+MainView.hpp:58:10:virtual void MainView::b7_callback()	0	static
+MainView.hpp:98:10:virtual void MainView::bf_callback()	0	static
+MainView.hpp:93:10:virtual void MainView::be_callback()	0	static
+MainView.hpp:88:10:virtual void MainView::bd_callback()	0	static
+MainView.hpp:83:10:virtual void MainView::bc_callback()	0	static
+MainView.hpp:78:10:virtual void MainView::bb_callback()	0	static
+MainView.hpp:73:10:virtual void MainView::ba_callback()	0	static
+MainView.hpp:68:10:virtual void MainView::b9_callback()	0	static
+MainView.hpp:63:10:virtual void MainView::b8_callback()	0	static
+MainView.hpp:53:10:virtual void MainView::b6_callback()	0	static
+MainView.hpp:48:10:virtual void MainView::b5_callback()	0	static
+MainView.hpp:43:10:virtual void MainView::b4_callback()	0	static
+MainView.hpp:38:10:virtual void MainView::b3_callback()	0	static
+MainView.hpp:33:10:virtual void MainView::b2_callback()	0	static
+MainView.hpp:22:10:virtual void MainView::b0_callback()	0	static
+MainView.hpp:27:10:virtual void MainView::b1_callback()	8	static
+MainView.hpp:15:13:virtual MainView::~MainView()	8	static
 MainView.cpp:3:1:MainView::MainView()	8	static

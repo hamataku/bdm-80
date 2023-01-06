@@ -104,6 +104,51 @@ public:
         // Override and implement this function in Main
     }
 
+    virtual void ret_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void run_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void function1()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void load_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void reset_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void adrs_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void read_incr_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void read_decr_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void write_incr_callback()
+    {
+        // Override and implement this function in Main
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -130,18 +175,18 @@ protected:
     touchgfx::ButtonWithLabel b2;
     touchgfx::ButtonWithLabel b1;
     touchgfx::ClickListener< touchgfx::ButtonWithLabel > b0;
-    touchgfx::ButtonWithLabel buttonWithLabel1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1_1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1_1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1_1_1;
-    touchgfx::ButtonWithLabel buttonWithLabel1_1_1_1_1_1_1_1_1;
-    touchgfx::Button button1;
-    touchgfx::ToggleButton toggleButton1_1;
-    touchgfx::TextArea textArea1;
+    touchgfx::ButtonWithLabel ret;
+    touchgfx::ButtonWithLabel run;
+    touchgfx::ButtonWithLabel store;
+    touchgfx::ButtonWithLabel load;
+    touchgfx::ButtonWithLabel reset;
+    touchgfx::ButtonWithLabel adrs;
+    touchgfx::ButtonWithLabel read_incr;
+    touchgfx::ButtonWithLabel read_decr;
+    touchgfx::ButtonWithLabel write_incr;
+    touchgfx::Button setting;
+    touchgfx::ToggleButton toggleButton1;
+    touchgfx::TextArea step;
 
 private:
 

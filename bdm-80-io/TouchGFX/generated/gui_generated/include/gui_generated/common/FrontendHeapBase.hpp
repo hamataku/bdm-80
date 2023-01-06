@@ -18,6 +18,8 @@
 #include <gui/logo_screen/LogoPresenter.hpp>
 #include <gui/main_screen/MainView.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
+#include <gui/setting_screen/SettingView.hpp>
+#include <gui/setting_screen/SettingPresenter.hpp>
 
 
 /**
@@ -42,7 +44,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< LogoView,
             touchgfx::meta::TypeList< MainView,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< SettingView,
+            touchgfx::meta::Nil > >
             > GeneratedViewTypes;
 
     /**
@@ -56,7 +59,8 @@ public:
      */
     typedef touchgfx::meta::TypeList< LogoPresenter,
             touchgfx::meta::TypeList< MainPresenter,
-            touchgfx::meta::Nil >
+            touchgfx::meta::TypeList< SettingPresenter,
+            touchgfx::meta::Nil > >
             > GeneratedPresenterTypes;
 
     /**

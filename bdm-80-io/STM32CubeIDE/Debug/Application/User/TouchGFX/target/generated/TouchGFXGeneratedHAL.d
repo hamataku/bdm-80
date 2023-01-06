@@ -100,6 +100,12 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
+ ../../TouchGFX/gui/include/gui/setting_screen/SettingView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/setting_screen/SettingViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/setting_screen/SettingPresenter.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
@@ -303,6 +309,18 @@ C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
+
+../../TouchGFX/gui/include/gui/setting_screen/SettingView.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/setting_screen/SettingViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/setting_screen/SettingPresenter.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:
 

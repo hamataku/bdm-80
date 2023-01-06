@@ -6,15 +6,21 @@
 #include <touchgfx/hal/Types.hpp>
 #include <touchgfx/Bitmap.hpp>
 
-const uint16_t BITMAP_BLUE_ID = 0;
-const uint16_t BITMAP_BLUE_ICONS_SETTINGS_32_ID = 1;
-const uint16_t BITMAP_BLUE_PRESSED_ID = 2;
-const uint16_t BITMAP_DARK_ID = 3;
-const uint16_t BITMAP_DARK_PRESSED_ID = 4;
-const uint16_t BITMAP_ORANGE_ID = 5;
-const uint16_t BITMAP_ORANGE_PRESSED_ID = 6;
-const uint16_t BITMAP_TOGGLE_OFF_ID = 7;
-const uint16_t BITMAP_TOGGLE_ON_ID = 8;
+const uint16_t BITMAP_BACK_ICON_ID = 0;
+const uint16_t BITMAP_BLUE_ID = 1;
+const uint16_t BITMAP_BLUE_ICONS_FOLDER_48_ID = 2;
+const uint16_t BITMAP_BLUE_ICONS_REMOVE_32_ID = 3;
+const uint16_t BITMAP_BLUE_ICONS_SETTINGS_32_ID = 4;
+const uint16_t BITMAP_BLUE_PRESSED_ID = 5;
+const uint16_t BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID = 6;
+const uint16_t BITMAP_DARK_ID = 7;
+const uint16_t BITMAP_DARK_PRESSED_ID = 8;
+const uint16_t BITMAP_ORANGE_ID = 9;
+const uint16_t BITMAP_ORANGE_PRESSED_ID = 10;
+const uint16_t BITMAP_POPUP_ID = 11;
+const uint16_t BITMAP_TOGGLE_OFF_ID = 12;
+const uint16_t BITMAP_TOGGLE_ON_ID = 13;
+const uint16_t BITMAP_VOLUME_BAR_ID = 14;
 
 namespace BitmapDatabase
 {

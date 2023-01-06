@@ -13,6 +13,8 @@
 #include <gui/logo_screen/LogoPresenter.hpp>
 #include <gui/main_screen/MainView.hpp>
 #include <gui/main_screen/MainPresenter.hpp>
+#include <gui/setting_screen/SettingView.hpp>
+#include <gui/setting_screen/SettingPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -55,4 +57,28 @@ void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()
 void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()
 {
     touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoMainScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Setting
+
+void FrontendApplicationBase::gotoSettingScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSettingScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSettingScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<SettingView, SettingPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

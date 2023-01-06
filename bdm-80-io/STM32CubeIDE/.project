@@ -308,6 +308,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/model/Model.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/gui/SettingPresenter.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/setting_screen/SettingPresenter.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/gui/SettingView.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/gui/src/setting_screen/SettingView.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/ApplicationFontProvider.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/ApplicationFontProvider.cpp</locationURI>
@@ -326,6 +336,11 @@
 			<name>Application/User/generated/Font_tazugane_11_1bpp_0.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_tazugane_11_1bpp_0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Font_tazugane_15_4bpp_0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_tazugane_15_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Font_tazugane_35_4bpp_0.cpp</name>
@@ -348,6 +363,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_tazugane_11_1bpp.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Kerning_tazugane_15_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_tazugane_15_4bpp.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/Kerning_tazugane_35_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_tazugane_35_4bpp.cpp</locationURI>
@@ -361,6 +381,11 @@
 			<name>Application/User/generated/Table_tazugane_11_1bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_tazugane_11_1bpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Table_tazugane_15_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_tazugane_15_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/Table_tazugane_35_4bpp.cpp</name>
@@ -393,14 +418,39 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/main_screen/MainViewBase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/SettingViewBase.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/gui_generated/src/setting_screen/SettingViewBase.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/BitmapDatabase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/BitmapDatabase.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_Blue_Icons_Folder_48.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Folder_48.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Icons_Remove_32.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Remove_32.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_Blue_Icons_Settings_32.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Icons_Settings_32.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_Blue_Radio_buttons_Radio_Round_button_normal.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__designer/image_Blue_Radio_buttons_Radio_Round_button_normal.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_back_icon.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_back_icon.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_blue.cpp</name>
@@ -433,6 +483,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_orange_pressed.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_popup.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_popup.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_toggle_off.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_toggle_off.cpp</locationURI>
@@ -441,6 +496,11 @@
 			<name>Application/User/generated/image_toggle_on.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_toggle_on.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_volume_bar.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_volume_bar.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/LanguageGb.cpp</name>

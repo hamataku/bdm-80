@@ -6,6 +6,93 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_14YJ" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Demo</Translation>
+      </Text>
+      <Text Id="__SingleUse_1S7H" Alignment="Center" TypographyId="Medium">
+        <Translation Language="GB">&lt;value&gt; Hz</Translation>
+      </Text>
+      <Text Id="__SingleUse_AWO7" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">Frequency</Translation>
+      </Text>
+      <Text Id="__SingleUse_OD52" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">STEP</Translation>
+      </Text>
+      <Text Id="__SingleUse_8ZG6" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">WRITE&#10;INCR</Translation>
+      </Text>
+      <Text Id="__SingleUse_WA97" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">READ&#10;DECR</Translation>
+      </Text>
+      <Text Id="__SingleUse_SSKK" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">READ&#10;INCR</Translation>
+      </Text>
+      <Text Id="__SingleUse_1P6H" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">ADRS&#10;SET</Translation>
+      </Text>
+      <Text Id="__SingleUse_60TH" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RESET</Translation>
+      </Text>
+      <Text Id="__SingleUse_0Q0B" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">LOAD</Translation>
+      </Text>
+      <Text Id="__SingleUse_5OAY" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">STORE</Translation>
+      </Text>
+      <Text Id="__SingleUse_SBLS" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_YEQD" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RET</Translation>
+      </Text>
+      <Text Id="__SingleUse_YKCP" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y6RH" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_M2GY" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_3LFJ" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_B5HO" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_HAF5" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_GDIY" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_9ZH9" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_T7YJ" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_7EEN" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z6M2" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">A</Translation>
+      </Text>
+      <Text Id="__SingleUse_WDDI" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">B</Translation>
+      </Text>
+      <Text Id="__SingleUse_3ZAR" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">C</Translation>
+      </Text>
+      <Text Id="__SingleUse_NNNQ" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">D</Translation>
+      </Text>
+      <Text Id="__SingleUse_M3XV" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">E</Translation>
+      </Text>
+      <Text Id="__SingleUse_VAYO" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">F</Translation>
+      </Text>
       <Text Id="__SingleUse_4LNC" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">STEP</Translation>
       </Text>
@@ -96,5 +183,6 @@
     <Typography Id="Large" Font="tazugane.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Normal" Font="tazugane.ttf" Size="35" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="tazugane.ttf" Size="11" Bpp="1" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Medium" Font="tazugane.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>
