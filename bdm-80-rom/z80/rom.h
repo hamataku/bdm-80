@@ -1,3 +1,3 @@
 #pragma once
 #include <stdint.h>
-extern uint8_t rom_data[65536];
+extern const uint8_t mem_data[65536];

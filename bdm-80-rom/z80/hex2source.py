@@ -14,7 +14,7 @@ ih.loadhex(dirname + '/main.ihx')
 f = open(dirname + '/rom.c', 'w')
 
 f.write('#include "rom.h"\n')
-f.write('__attribute__((section(".ccmram"))) uint8_t rom_data[65536] = {\n')
+f.write('const uint8_t mem_data[65536] = {\n')
 
 for address in range(65536):
     if address in ih.addresses():
