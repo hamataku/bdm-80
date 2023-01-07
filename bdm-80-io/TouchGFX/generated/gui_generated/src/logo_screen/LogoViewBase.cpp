@@ -28,12 +28,12 @@ LogoViewBase::LogoViewBase() :
     textureMapper1.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
 
     textArea1.setXY(78, 79);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(148, 148, 148));
+    textArea1.setColor(touchgfx::Color::getColorFromRGB(122, 122, 122));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_4SKY));
 
-    textArea2.setXY(116, 162);
-    textArea2.setColor(touchgfx::Color::getColorFromRGB(148, 148, 148));
+    textArea2.setXY(105, 162);
+    textArea2.setColor(touchgfx::Color::getColorFromRGB(122, 122, 122));
     textArea2.setLinespacing(0);
     textArea2.setTypedText(touchgfx::TypedText(T___SINGLEUSE_ZM3U));
 
@@ -71,6 +71,6 @@ void LogoViewBase::afterTransition()
 {
     //wait
     //When screen transition ends delay
-    //Delay for 1000 ms (60 Ticks)
+    //Delay for 2000 ms (120 Ticks)
     waitCounter = WAIT_DURATION;
 }

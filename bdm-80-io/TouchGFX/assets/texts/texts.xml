@@ -120,7 +120,7 @@
       <Text Id="__SingleUse_F7SQ" Alignment="Center" TypographyId="Small">
         <Translation Language="GB">RUN</Translation>
       </Text>
-      <Text Id="__SingleUse_ZM3U" Alignment="Left" TypographyId="Small">
+      <Text Id="__SingleUse_ZM3U" Alignment="Center" TypographyId="Medium">
         <Translation Language="GB">Hamataku Lab</Translation>
       </Text>
       <Text Id="__SingleUse_4AKZ" Alignment="Center" TypographyId="Small">

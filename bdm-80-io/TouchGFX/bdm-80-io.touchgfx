@@ -37,25 +37,25 @@
             "TextId": "__SingleUse_4SKY",
             "TextRotation": "0",
             "Color": {
-              "Red": 148,
-              "Green": 148,
-              "Blue": 148
+              "Red": 122,
+              "Green": 122,
+              "Blue": 122
             },
             "AutoSize": true
           },
           {
             "Type": "TextArea",
             "Name": "textArea2",
-            "X": 116,
+            "X": 105,
             "Y": 162,
-            "Width": 81,
-            "Height": 22,
+            "Width": 110,
+            "Height": 31,
             "TextId": "__SingleUse_ZM3U",
             "TextRotation": "0",
             "Color": {
-              "Red": 148,
-              "Green": 148,
-              "Blue": 148
+              "Red": 122,
+              "Green": 122,
+              "Blue": 122
             },
             "AutoSize": true
           }
@@ -69,7 +69,7 @@
             },
             "Action": {
               "Type": "ActionDelay",
-              "Duration": 1000
+              "Duration": 2000
             }
           },
           {
@@ -1678,7 +1678,7 @@
               "Scale": 1.1,
               "Easing": "Linear",
               "EasingOption": "In",
-              "Duration": 500,
+              "Duration": 150,
               "ActionComponent": "textureMapper1"
             }
           },
@@ -1701,7 +1701,7 @@
             },
             "Action": {
               "Type": "ActionDelay",
-              "Duration": 500
+              "Duration": 150
             }
           },
           {

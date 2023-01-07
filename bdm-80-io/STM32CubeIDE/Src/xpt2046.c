@@ -49,12 +49,12 @@ static uint8_t XPT2046_initilazed = 0;
 
 static void XPT2046_SetCS(void)
 {
-    HAL_GPIO_WritePin(T_CS_GPIO_Port, T_CS_Pin, GPIO_PIN_SET);
+    T_CS_GPIO_Port->BSRR = T_CS_Pin;
 }
 
 static void XPT2046_ResetCS(void)
 {
-    HAL_GPIO_WritePin(T_CS_GPIO_Port, T_CS_Pin, GPIO_PIN_RESET);
+    T_CS_GPIO_Port->BSRR = (uint32_t)T_CS_Pin << 16U;
 }
 
 static void XPT2046_Write_Byte(uint8_t num)

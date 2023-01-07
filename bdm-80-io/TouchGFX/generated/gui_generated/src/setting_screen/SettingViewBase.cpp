@@ -191,7 +191,7 @@ SettingViewBase::SettingViewBase() :
     textureMapper1.setCameraDistance(1000.0f);
     textureMapper1.setOrigo(160.0f, 120.0f, 1000.0f);
     textureMapper1.setCamera(160.0f, 120.0f);
-    textureMapper1.setAngles(-0.0f, -0.0f, -0.0f);
+    textureMapper1.setAngles(0.0f, 0.0f, 0.0f);
     textureMapper1.setRenderingAlgorithm(touchgfx::TextureMapper::NEAREST_NEIGHBOR);
 
     container1.setPosition(0, 0, 320, 240);
@@ -272,12 +272,12 @@ void SettingViewBase::setupScreen()
     //resize
     //When screen transition begins scale textureMapper1
     //Scale textureMapper1
-    textureMapper1.setupAnimation(touchgfx::AnimationTextureMapper::SCALE, 1.100f, 30, 0, touchgfx::EasingEquations::linearEaseIn);
+    textureMapper1.setupAnimation(touchgfx::AnimationTextureMapper::SCALE, 1.100f, 9, 0, touchgfx::EasingEquations::linearEaseIn);
     textureMapper1.startAnimation();
 
     //wait
     //When screen transition begins delay
-    //Delay for 500 ms (30 Ticks)
+    //Delay for 150 ms (9 Ticks)
     waitCounter = WAIT_DURATION;
 
 }

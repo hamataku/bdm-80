@@ -79,7 +79,7 @@ private:
     /*
      * Delay Variable Declarations
      */
-    static const uint16_t WAIT_DURATION = 30;
+    static const uint16_t WAIT_DURATION = 9;
     uint16_t waitCounter;
 
     /*

@@ -65,6 +65,7 @@ static void LED_H(void);
 // Initialization
 void ILI9341_Init(void)
 {
+    HAL_Delay(1000);
     ILI9341_Reset();
     ILI9341_SoftReset();
 
@@ -340,27 +341,27 @@ static void LCD_direction(LCD_Horizontal_t direction)
 
 static void RESET_L(void)
 {
-    HAL_GPIO_WritePin(P_RESET_GPIO_Port, P_RESET_Pin, GPIO_PIN_RESET);
+    P_RESET_GPIO_Port->BSRR = (uint32_t)P_RESET_Pin << 16U;
 }
 
 static void RESET_H(void)
 {
-    HAL_GPIO_WritePin(P_RESET_GPIO_Port, P_RESET_Pin, GPIO_PIN_SET);
+    P_RESET_GPIO_Port->BSRR = (uint32_t)P_RESET_Pin;
 }
 
 static void CS_L(void)
 {
-    HAL_GPIO_WritePin(P_CS_GPIO_Port, P_CS_Pin, GPIO_PIN_RESET);
+    P_CS_GPIO_Port->BSRR = (uint32_t)P_CS_Pin << 16U;
 }
 
 static void DC_L(void)
 {
-    HAL_GPIO_WritePin(P_DC_GPIO_Port, P_DC_Pin, GPIO_PIN_RESET);
+    P_DC_GPIO_Port->BSRR = (uint32_t)P_DC_Pin << 16U;
 }
 
 static void DC_H(void)
 {
-    HAL_GPIO_WritePin(P_DC_GPIO_Port, P_DC_Pin, GPIO_PIN_SET);
+    P_DC_GPIO_Port->BSRR = (uint32_t)P_DC_Pin;
 }
 
 static void LED_H(void)
