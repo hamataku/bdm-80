@@ -15,6 +15,7 @@ MainView::MainView()
 
 void MainView::setupScreen()
 {
+    HAL_UART_Receive_DMA(&huart2, dma_rx_buffer, sizeof(dma_rx_buffer));
     for (int i = 0; i < 6; i++) {
         dma_exec();
         printf("v%x\n", address);
@@ -45,14 +46,10 @@ void MainView::update()
 
 void MainView::dma_exec()
 {
-    // 受信データの確認
-    if (READ_BIT(USART2->SR, UART_FLAG_FE | UART_FLAG_NE | UART_FLAG_ORE)) {
-        HAL_UART_AbortReceive(&huart2);
-        HAL_UART_Receive_DMA(&huart2, dma_rx_buffer, sizeof(dma_rx_buffer));
+    int16_t uart_buffer_end_index = sizeof(dma_rx_buffer) - 1 - huart2.hdmarx->Instance->NDTR;
+    if (uart_buffer_end_index < 0) {
         return;
     }
-
-    int16_t uart_buffer_end_index = sizeof(dma_rx_buffer) - 1 - huart2.hdmarx->Instance->NDTR;
 
     int16_t end_index = uart_buffer_end_index;
     static int16_t last_end_index = 0;

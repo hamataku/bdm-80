@@ -1,4 +1,5 @@
 #include <gui/setting_screen/SettingView.hpp>
+#include <gui/main_screen/MainView.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <cmath>
 #include <stdio.h>
@@ -11,6 +12,8 @@ SettingView::SettingView()
 
 void SettingView::setupScreen()
 {
+    slider1.setValue(slider_value);
+    slider_callback(slider_value);
     SettingViewBase::setupScreen();
 }
 
@@ -21,13 +24,15 @@ void SettingView::tearDownScreen()
 
 void SettingView::slider_callback(int value)
 {
-    freq = freq_list[value / 10];
+    slider_value = value;
+    int freq = freq_list[value / 10];
     Unicode::snprintf(hzBuffer, HZ_SIZE, "%d", freq);
     hz.invalidate();
 }
 
 void SettingView::slider_release_callback(int value)
 {
+    int freq = freq_list[value / 10];
     printf("f%d\n", freq);
 }
 

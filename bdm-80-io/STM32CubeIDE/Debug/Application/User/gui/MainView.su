@@ -20,15 +20,15 @@ MainView.hpp:78:10:virtual void MainView::bc_callback()	0	static
 MainView.hpp:82:10:virtual void MainView::bd_callback()	0	static
 MainView.hpp:86:10:virtual void MainView::be_callback()	0	static
 MainView.hpp:90:10:virtual void MainView::bf_callback()	0	static
-MainView.cpp:26:6:virtual void MainView::tearDownScreen()	0	static
+MainView.cpp:27:6:virtual void MainView::tearDownScreen()	0	static
+MainView.hpp:109:10:virtual void MainView::write_incr_callback()	8	static
 MainView.hpp:104:10:virtual void MainView::read_decr_callback()	0	static
 MainView.hpp:99:10:virtual void MainView::read_incr_callback()	0	static
 MainView.hpp:94:10:virtual void MainView::adrs_callback()	0	static
-MainView.hpp:116:10:virtual void MainView::run_callback()	0	static
-MainView.hpp:109:10:virtual void MainView::write_incr_callback()	8	static
-MainView.hpp:120:10:virtual void MainView::reset_callback()	8	static
+MainView.hpp:115:10:virtual void MainView::run_callback()	0	static
 MainView.hpp:16:13:virtual MainView::~MainView()	8	static
 MainView.cpp:11:1:MainView::MainView()	8	static
-MainView.cpp:46:6:void MainView::dma_exec()	24	static
+MainView.cpp:47:6:void MainView::dma_exec()	24	static
 MainView.cpp:16:6:virtual void MainView::setupScreen()	24	static
-MainView.cpp:32:6:virtual void MainView::update()	8	static
+MainView.cpp:33:6:virtual void MainView::update()	8	static
+MainView.hpp:119:10:virtual void MainView::reset_callback()	16	static

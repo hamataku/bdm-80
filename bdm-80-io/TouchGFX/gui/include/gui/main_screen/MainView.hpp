@@ -110,7 +110,6 @@ protected:
     {
         printf("w%04x%x\n", address, data & 0xff);
         address++;
-        HAL_Delay(10);
         printf("v%x\n", address);
     }
     void run_callback() override
@@ -121,8 +120,11 @@ protected:
     {
         printf("r\n");
         address = 0;
-        HAL_Delay(200);
-        printf("v0\n");
+        for (int i = 0; i < 6; i++) {
+            dma_exec();
+            printf("v0\n");
+            HAL_Delay(100);
+        }
     }
 #endif
 };

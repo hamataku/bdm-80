@@ -16,7 +16,9 @@ protected:
     void slider_callback(int value) override;
     void slider_release_callback(int value) override;
     void demo_callback() override;
-    int freq = 1;
+    static int slider_value;
 };
+
+inline int SettingView::slider_value = 1;
 
 #endif  // SETTINGVIEW_HPP

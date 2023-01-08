@@ -61,7 +61,7 @@ void com_update()
             memcpy(buf, &receive[5], 2);
             uint8_t d = (uint8_t)strtol(buf, NULL, 16);
             data[p] = d;
-            printf("write %x %x\n", p, d);
+            //printf("write %x %x\n", p, d);
             break;
         }
         case 'v': {
