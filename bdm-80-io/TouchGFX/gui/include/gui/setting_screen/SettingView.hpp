@@ -11,7 +11,12 @@ public:
     virtual ~SettingView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
 protected:
+    void slider_callback(int value) override;
+    void slider_release_callback(int value) override;
+    void demo_callback() override;
+    int freq = 1;
 };
 
-#endif // SETTINGVIEW_HPP
+#endif  // SETTINGVIEW_HPP

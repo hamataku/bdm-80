@@ -43,8 +43,6 @@ Application/User/gui/LogoView.o: \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp
@@ -134,10 +132,6 @@ Application/User/gui/LogoView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 

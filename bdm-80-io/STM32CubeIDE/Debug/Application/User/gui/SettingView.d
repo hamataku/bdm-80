@@ -56,7 +56,8 @@ Application/User/gui/SettingView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
+ ../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp
 
 ../../TouchGFX/gui/include/gui/setting_screen/SettingView.hpp:
 
@@ -171,3 +172,5 @@ Application/User/gui/SettingView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
+
+../../TouchGFX/generated/texts/include/texts/TextKeysAndLanguages.hpp:

@@ -6,6 +6,9 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_GC5Q" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">1</Translation>
+      </Text>
       <Text Id="__SingleUse_14YJ" Alignment="Left" TypographyId="Medium">
         <Translation Language="GB">Demo</Translation>
       </Text>
@@ -183,6 +186,6 @@
     <Typography Id="Large" Font="tazugane.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Normal" Font="tazugane.ttf" Size="35" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="tazugane.ttf" Size="11" Bpp="1" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Medium" Font="tazugane.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Medium" Font="tazugane.ttf" Size="15" Bpp="4" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

@@ -52,8 +52,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/gui/include/gui/logo_screen/LogoPresenter.hpp \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
- ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
@@ -104,6 +102,8 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/setting_screen/SettingViewBase.hpp \
  ../../TouchGFX/gui/include/gui/setting_screen/SettingPresenter.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
@@ -214,10 +214,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
-
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
-
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
@@ -317,6 +313,10 @@ C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
 ../../TouchGFX/gui/include/gui/setting_screen/SettingPresenter.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AnimationTextureMapper.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextureMapper.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
 

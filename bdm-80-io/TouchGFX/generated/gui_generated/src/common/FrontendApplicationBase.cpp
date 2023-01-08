@@ -48,15 +48,15 @@ void FrontendApplicationBase::gotoLogoScreenNoTransitionImpl()
 
 // Main
 
-void FrontendApplicationBase::gotoMainScreenWipeTransitionWest()
+void FrontendApplicationBase::gotoMainScreenWipeTransitionNorth()
 {
-    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenWipeTransitionWestImpl);
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenWipeTransitionNorthImpl);
     pendingScreenTransitionCallback = &transitionCallback;
 }
 
-void FrontendApplicationBase::gotoMainScreenWipeTransitionWestImpl()
+void FrontendApplicationBase::gotoMainScreenWipeTransitionNorthImpl()
 {
-    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+    touchgfx::makeTransition<MainView, MainPresenter, touchgfx::WipeTransition<NORTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }
 
 void FrontendApplicationBase::gotoMainScreenNoTransition()

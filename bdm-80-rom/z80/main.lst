@@ -7,13 +7,22 @@ Hexadecimal [16-Bits]
                               2 .area TEST(ABS)
                               3 
    0000                       4 .org	0x0000
-   0000                       5 main:
-   0000 21 FD FF      [10]    6   ld hl,#0xfffd
-   0003 36 00         [10]    7   ld (hl),#0x00
-   0005 21 00 01      [10]    8   ld hl,#0x100
-   0008 7E            [ 7]    9   ld a,(hl)
-   0009 21 01 01      [10]   10   ld hl,#0x101
-   000C 46            [ 7]   11   ld b,(hl)
-   000D 67            [ 4]   12   ld h,a
-   000E 68            [ 4]   13   ld l,b
-   000F E9            [ 4]   14   jp (hl)
+   0000                       5 start:
+   0000 21 00 01      [10]    6   ld hl,#0x100
+   0003 7E            [ 7]    7   ld a,(hl)
+   0004 21 01 01      [10]    8   ld hl,#0x101
+   0007 46            [ 7]    9   ld b,(hl)
+   0008 67            [ 4]   10   ld h,a
+   0009 68            [ 4]   11   ld l,b
+   000A E9            [ 4]   12   jp (hl)
+                             13 
+   8000                      14 .org	0x8000
+   8000                      15 main:
+   8000 01 00 00      [10]   16   ld bc,#0x0
+   8003                      17 loop:
+   8003 03            [ 6]   18   inc bc
+   8004 21 FC FF      [10]   19   ld hl,#0xfffc
+   8007 70            [ 7]   20   ld (hl),b
+   8008 21 FD FF      [10]   21   ld hl,#0xfffd
+   800B 71            [ 7]   22   ld (hl),c
+   800C C3 03 80      [10]   23   jp loop

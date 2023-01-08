@@ -9,13 +9,15 @@
 #include "tim.h"
 #include "clock.h"
 
-// #define DEBUG
-
 uint32_t moder_output = 0;
 uint32_t moder_input = 0;
 
 uint16_t address = 0;
 uint16_t address_prev = 0;
+
+volatile uint16_t last_send_address = 0;
+volatile uint8_t last_send_data_up = 0;
+volatile uint8_t last_send_data_down = 0;
 
 __attribute__((section(".ccmram"))) uint8_t data[65536];
 
@@ -56,7 +58,7 @@ void main_init(void)
     // CPU RESET
     main_reset();
 
-    HAL_TIM_Base_Start_IT(&htim2);
+    HAL_TIM_Base_Stop_IT(&htim2);
     main_setFrequency(10);
 }
 
@@ -71,7 +73,7 @@ void main_reset()
         main_callback();
     }
     HAL_GPIO_WritePin(RESET_GPIO_Port, RESET_Pin, GPIO_PIN_SET);
-    HAL_TIM_Base_Start_IT(&htim2);
+    HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin, GPIO_PIN_SET);
 }
 
 void main_cycle(void)
@@ -92,29 +94,29 @@ void main_callback(void)
         address = ADDR_PORT->IDR;
         data[address] = (uint8_t)(DATA_PORT->IDR);
 
-        if (address >= 0xfffc) {
+        if (address >= 0xfffc && last_send_address != address) {
             // LCD表示
-            printf("%d%x\n", address - 0xfffc, data[address]);
+            if (address <= 0xfffd) {
+                if (last_send_data_up != data[0xfffc] || last_send_data_down != data[0xfffd]) {
+                    last_send_address = address;
+                    last_send_data_up = data[0xfffc];
+                    last_send_data_down = data[0xfffd];
+                    printf("k%x\n", data[0xfffc] << 8 | data[0xfffd]);
+                }
+            } else {
+                if (last_send_data_up != data[0xfffe] || last_send_data_down != data[0xffff]) {
+                    last_send_address = address;
+                    last_send_data_up = data[0xfffe];
+                    last_send_data_down = data[0xffff];
+                    printf("l%x\n", data[0xfffe] << 8 | data[0xffff]);
+                }
+            }
         }
-
-#ifdef DEBUG
-        if (address != address_prev) {
-            address_prev = address;
-            printf("w: %x %x\n", address, (uint8_t)(DATA_PORT->IDR));
-        }
-#endif
     } else if ((GPIOA->IDR & (MREQ_Pin | RD_Pin | WR_Pin)) == WR_Pin) {
         // read
         DATA_PORT->MODER = moder_output;
         address = ADDR_PORT->IDR;
         DATA_PORT->ODR = data[address];
-
-#ifdef DEBUG
-        if (address != address_prev) {
-            address_prev = address;
-            printf("r: %x %x\n", address, data[address]);
-        }
-#endif
     } else {
         // disable
         DATA_PORT->MODER = moder_input;

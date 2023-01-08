@@ -24,7 +24,7 @@ public:
     void gotoLogoScreenNoTransition();
 
     // Main
-    void gotoMainScreenWipeTransitionWest();
+    void gotoMainScreenWipeTransitionNorth();
 
     void gotoMainScreenNoTransition();
 
@@ -40,7 +40,7 @@ protected:
     void gotoLogoScreenNoTransitionImpl();
 
     // Main
-    void gotoMainScreenWipeTransitionWestImpl();
+    void gotoMainScreenWipeTransitionNorthImpl();
 
     void gotoMainScreenNoTransitionImpl();
 

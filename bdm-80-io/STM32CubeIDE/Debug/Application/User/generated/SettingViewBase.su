@@ -25,22 +25,31 @@ TextArea.hpp:403:41:virtual const UnicodeChar* touchgfx::TextArea::getWildcard2(
 TextAreaWithWildcard.hpp:46:36:virtual touchgfx::TextArea::BoundingArea touchgfx::TextAreaWithWildcardBase::calculateBoundingArea() const	0	static
 TextAreaWithWildcard.hpp:81:41:virtual const UnicodeChar* touchgfx::TextAreaWithOneWildcard::getWildcard1() const	0	static
 SettingViewBase.hpp:25:13:SettingViewBase::~SettingViewBase()	0	static
+SettingViewBase.hpp:32:18:virtual void SettingViewBase::slider_callback(int)	0	static
+SettingViewBase.hpp:37:18:virtual void SettingViewBase::slider_release_callback(int)	0	static
+SettingViewBase.hpp:42:18:virtual void SettingViewBase::demo_callback()	0	static
+Callback.hpp:290:8:touchgfx::Callback<SettingViewBase, const touchgfx::Slider&, int>::~Callback()	0	static
 Callback.hpp:357:8:touchgfx::Callback<SettingViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::ButtonWithLabel>::~ClickListener()	0	static
 TextAreaWithWildcard.hpp:59:7:touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	0	static
+Callback.hpp:318:18:void touchgfx::Callback<dest_type, T1, T2, void>::execute(T1, T2) [with dest_type = SettingViewBase; T1 = const touchgfx::Slider&; T2 = int]	8	static
+Callback.hpp:328:18:bool touchgfx::Callback<dest_type, T1, T2, void>::isValid() const [with dest_type = SettingViewBase; T1 = const touchgfx::Slider&; T2 = int]	0	static
 Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = SettingViewBase; T1 = const touchgfx::AbstractButton&]	8	static
 Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = SettingViewBase; T1 = const touchgfx::AbstractButton&]	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 TextAreaWithWildcard.hpp:59:7:virtual touchgfx::TextAreaWithOneWildcard::~TextAreaWithOneWildcard()	8	static
 ClickListener.hpp:33:7:virtual touchgfx::ClickListener<touchgfx::ButtonWithLabel>::~ClickListener()	8	static
 Callback.hpp:357:8:virtual touchgfx::Callback<SettingViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
+Callback.hpp:290:8:virtual touchgfx::Callback<SettingViewBase, const touchgfx::Slider&, int>::~Callback()	8	static
 SettingViewBase.hpp:25:13:virtual SettingViewBase::~SettingViewBase()	8	static
-SettingViewBase.cpp:286:6:virtual void SettingViewBase::handleTickEvent()	0	static
-SettingViewBase.cpp:269:6:virtual void SettingViewBase::setupScreen()	24	static
+SettingViewBase.cpp:293:6:virtual void SettingViewBase::handleTickEvent()	0	static
+SettingViewBase.cpp:276:6:virtual void SettingViewBase::setupScreen()	24	static
 Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	0	static
 ClickListener.hpp:49:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ButtonWithLabel]	16	static
-SettingViewBase.cpp:303:6:void SettingViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+SettingViewBase.cpp:328:6:void SettingViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider&, int)	4	static
+SettingViewBase.cpp:339:6:void SettingViewBase::sliderValueConfirmedCallbackHandler(const touchgfx::Slider&, int)	4	static
 TextArea.hpp:111:18:virtual void touchgfx::TextArea::setBaselineY(int16_t)	16	static
+SettingViewBase.cpp:310:6:void SettingViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	16	static
 TextArea.hpp:127:18:virtual void touchgfx::TextArea::setXBaselineY(int16_t, int16_t)	24	static
 SettingViewBase.cpp:9:1:SettingViewBase::SettingViewBase()	232	static

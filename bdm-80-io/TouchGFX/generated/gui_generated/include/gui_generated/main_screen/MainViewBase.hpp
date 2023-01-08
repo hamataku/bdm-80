@@ -20,6 +20,7 @@ public:
     MainViewBase();
     virtual ~MainViewBase() {}
     virtual void setupScreen();
+    virtual void handleTickEvent();
 
     /*
      * Virtual Action Handlers
@@ -114,7 +115,7 @@ public:
         // Override and implement this function in Main
     }
 
-    virtual void function1()
+    virtual void store_callback()
     {
         // Override and implement this function in Main
     }
@@ -145,6 +146,11 @@ public:
     }
 
     virtual void write_incr_callback()
+    {
+        // Override and implement this function in Main
+    }
+
+    virtual void update()
     {
         // Override and implement this function in Main
     }

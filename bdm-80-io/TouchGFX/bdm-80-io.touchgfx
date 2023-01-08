@@ -16,18 +16,6 @@
             }
           },
           {
-            "Type": "TextureMapper",
-            "Name": "textureMapper1",
-            "X": 160,
-            "Y": 30,
-            "Width": 80,
-            "Height": 80,
-            "RenderingAlgorithm": "Nearest-neighbor",
-            "Scale": 1.0,
-            "ZOrigo": 1000.0,
-            "CameraDistance": 1000.0
-          },
-          {
             "Type": "TextArea",
             "Name": "textArea1",
             "X": 78,
@@ -69,7 +57,7 @@
             },
             "Action": {
               "Type": "ActionDelay",
-              "Duration": 2000
+              "Duration": 3000
             }
           },
           {
@@ -81,7 +69,7 @@
             "Action": {
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionWipe",
-              "ScreenTransitionDirection": "West",
+              "ScreenTransitionDirection": "North",
               "ActionComponent": "Main"
             }
           }
@@ -899,7 +887,7 @@
             },
             "Action": {
               "Type": "ActionCustom",
-              "FunctionName": "function1"
+              "FunctionName": "store_callback"
             }
           },
           {
@@ -966,6 +954,17 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "write_incr_callback"
+            }
+          },
+          {
+            "InteractionName": "update",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 1
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "update"
             }
           }
         ]
@@ -1628,7 +1627,7 @@
                 "BackgroundX": 24,
                 "BackgroundY": 19,
                 "IndicatorMax": 205,
-                "ValueMax": 100
+                "ValueMax": 99
               },
               {
                 "Type": "TextArea",
@@ -1644,18 +1643,21 @@
               {
                 "Type": "TextArea",
                 "Name": "hz",
-                "X": 148,
+                "X": 80,
                 "Y": 177,
-                "Width": 24,
+                "Width": 160,
                 "Height": 31,
                 "TextId": "__SingleUse_1S7H",
                 "TextRotation": "0",
-                "AutoSize": true,
-                "Wildcard1": {}
+                "Wildcard1": {
+                  "TextId": "__SingleUse_GC5Q",
+                  "UseBuffer": true,
+                  "BufferSize": 10
+                }
               },
               {
                 "Type": "Button",
-                "Name": "button2",
+                "Name": "button_demo",
                 "X": 137,
                 "Y": 83,
                 "Width": 46,
@@ -1714,6 +1716,39 @@
               "Type": "ActionGotoScreen",
               "ScreenTransitionType": "ScreenTransitionNone",
               "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "slider",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "slider1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "slider_callback"
+            }
+          },
+          {
+            "InteractionName": "slider_release",
+            "Trigger": {
+              "Type": "TriggerSliderValueConfirmed",
+              "TriggerComponent": "slider1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "slider_release_callback"
+            }
+          },
+          {
+            "InteractionName": "demo",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button_demo"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "demo_callback"
             }
           }
         ]

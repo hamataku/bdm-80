@@ -29,6 +29,8 @@ void com_update()
         __set_BASEPRI(3 << 4);
         switch (receive[0]) {
         case 'r':
+            data[0x100] = 0x00;
+            data[0x101] = 0x00;
             main_reset();
             break;
         case 'R':
@@ -37,13 +39,16 @@ void com_update()
         case 'h':
             printf("halt\n");
             HAL_TIM_Base_Stop_IT(&htim2);
+            HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin, GPIO_PIN_SET);
             break;
         case 's': {
             uint16_t p = (uint16_t)strtol((char*)&receive[1], NULL, 16);
             data[0x100] = (uint8_t)(p >> 8);
             data[0x101] = (uint8_t)(p & 0xff);
 
-            printf("start 0x%x\n", p);
+            printf("k%x\n", (uint16_t)(data[0xfffc]) << 8 | data[0xfffd]);
+            HAL_Delay(10);
+            printf("l%x\n", (uint16_t)(data[0xfffe]) << 8 | data[0xffff]);
             main_reset();
             HAL_TIM_Base_Start_IT(&htim2);
             break;
@@ -61,7 +66,11 @@ void com_update()
         }
         case 'v': {
             uint16_t p = (uint16_t)strtol((char*)&receive[1], NULL, 16);
-            HAL_UART_Transmit(&huart2, &data[p], 1, 100);
+            if (p == 0) {
+                printf("l00%02x\n", data[0x00]);
+            } else {
+                printf("l%02x%02x\n", data[p - 1], data[p]);
+            }
             break;
         }
         case 'f': {

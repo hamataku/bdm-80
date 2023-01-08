@@ -26,6 +26,24 @@ public:
     virtual void setupScreen();
     virtual void handleTickEvent();
 
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void slider_callback(int value)
+    {
+        // Override and implement this function in Setting
+    }
+
+    virtual void slider_release_callback(int value)
+    {
+        // Override and implement this function in Setting
+    }
+
+    virtual void demo_callback()
+    {
+        // Override and implement this function in Setting
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -72,7 +90,13 @@ protected:
     touchgfx::Slider slider1;
     touchgfx::TextArea demo;
     touchgfx::TextAreaWithOneWildcard hz;
-    touchgfx::Button button2;
+    touchgfx::Button button_demo;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t HZ_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar hzBuffer[HZ_SIZE];
 
 private:
 
@@ -86,11 +110,15 @@ private:
      * Callback Declarations
      */
     touchgfx::Callback<SettingViewBase, const touchgfx::AbstractButton&> buttonCallback;
+    touchgfx::Callback<SettingViewBase, const touchgfx::Slider&, int> sliderValueChangedCallback;
+    touchgfx::Callback<SettingViewBase, const touchgfx::Slider&, int> sliderValueConfirmedCallback;
 
     /*
      * Callback Handler Declarations
      */
     void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+    void sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value);
+    void sliderValueConfirmedCallbackHandler(const touchgfx::Slider& src, int value);
 
 };
 

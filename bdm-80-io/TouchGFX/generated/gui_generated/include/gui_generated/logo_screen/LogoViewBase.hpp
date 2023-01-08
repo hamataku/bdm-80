@@ -8,7 +8,6 @@
 #include <mvp/View.hpp>
 #include <gui/logo_screen/LogoPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/TextureMapper.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 
 class LogoViewBase : public touchgfx::View<LogoPresenter>
@@ -30,7 +29,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Box box1;
-    touchgfx::TextureMapper textureMapper1;
     touchgfx::TextArea textArea1;
     touchgfx::TextArea textArea2;
 
@@ -39,7 +37,7 @@ private:
     /*
      * Delay Variable Declarations
      */
-    static const uint16_t WAIT_DURATION = 120;
+    static const uint16_t WAIT_DURATION = 180;
     uint16_t waitCounter;
 
 };

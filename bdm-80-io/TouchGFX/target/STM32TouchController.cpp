@@ -23,6 +23,8 @@
 #include <STM32TouchController.hpp>
 #include "ili9341.h"
 #include "xpt2046.h"
+#include <stdio.h>
+#include <cmath>
 
 extern "C" {
 static void ConvXPTtoILI(uint16_t* x, uint16_t* y)
@@ -61,15 +63,39 @@ bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
      */
     static uint16_t prevx = GUI_WIDTH;
     static uint16_t prevy = GUI_HEIGHT;
-    uint16_t intx, inty;
-    XPT2046_Update(&intx, &inty);
+
+    static int32_t x_prev = 0;
+    static int32_t y_prev = 0;
+    static int count = 0;
+    static bool touch_flag = false;
+    uint16_t intx = 0, inty = 0;
+
+    if (count > 6) {
+        XPT2046_Update(&intx, &inty);
+        count = 0;
+    } else {
+        count++;
+    }
+
     if (XPT2046_IsReasonable(intx, inty)) {
         ConvXPTtoILI(&intx, &inty);
         if (intx != prevx || inty != prevy) {
-            prevx = intx;
-            prevy = inty;
             x = GUI_WIDTH - (int32_t)intx;
             y = GUI_HEIGHT - (int32_t)inty;
+
+            if (touch_flag) {
+                touch_flag = false;
+                if (std::abs(x - x_prev) > 10 || std::abs(y - y_prev) > 10) {
+                    return false;
+                }
+            } else {
+                touch_flag = true;
+                x_prev = x;
+                y_prev = y;
+                return false;
+            }
+            prevx = intx;
+            prevy = inty;
             return true;
         }
     }

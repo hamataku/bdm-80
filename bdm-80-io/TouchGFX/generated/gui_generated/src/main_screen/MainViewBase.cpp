@@ -240,6 +240,16 @@ void MainViewBase::setupScreen()
 
 }
 
+//Handles tick based events
+void MainViewBase::handleTickEvent()
+{
+    //update
+    //When every N tick call virtual function
+    //Call update
+    update();
+
+}
+
 void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
     if (&src == &bf)
@@ -372,8 +382,8 @@ void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
     {
         //store
         //When store clicked call virtual function
-        //Call function1
-        function1();
+        //Call store_callback
+        store_callback();
     }
     else if (&src == &load)
     {

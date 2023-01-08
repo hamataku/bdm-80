@@ -8,7 +8,9 @@
 
 SettingViewBase::SettingViewBase() :
     waitCounter(0),
-    buttonCallback(this, &SettingViewBase::buttonCallbackHandler)
+    buttonCallback(this, &SettingViewBase::buttonCallbackHandler),
+    sliderValueChangedCallback(this, &SettingViewBase::sliderValueChangedCallbackHandler),
+    sliderValueConfirmedCallback(this, &SettingViewBase::sliderValueConfirmedCallbackHandler)
 {
 
     __background.setPosition(0, 0, 320, 240);
@@ -211,8 +213,10 @@ SettingViewBase::SettingViewBase() :
     slider1.setXY(36, 144);
     slider1.setBitmaps(touchgfx::Bitmap(BITMAP_VOLUME_BAR_ID), touchgfx::Bitmap(BITMAP_VOLUME_BAR_ID), touchgfx::Bitmap(BITMAP_BLUE_RADIO_BUTTONS_RADIO_ROUND_BUTTON_NORMAL_ID));
     slider1.setupHorizontalSlider(24, 19, 0, 0, 205);
-    slider1.setValueRange(0, 100);
+    slider1.setValueRange(0, 99);
     slider1.setValue(0);
+    slider1.setNewValueCallback(sliderValueChangedCallback);
+    slider1.setStopValueCallback(sliderValueConfirmedCallback);
     container1.add(slider1);
 
     demo.setXY(137, 52);
@@ -221,15 +225,18 @@ SettingViewBase::SettingViewBase() :
     demo.setTypedText(touchgfx::TypedText(T___SINGLEUSE_14YJ));
     container1.add(demo);
 
-    hz.setXY(148, 177);
+    hz.setPosition(80, 177, 160, 31);
     hz.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     hz.setLinespacing(0);
+    Unicode::snprintf(hzBuffer, HZ_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_GC5Q).getText());
+    hz.setWildcard(hzBuffer);
     hz.setTypedText(touchgfx::TypedText(T___SINGLEUSE_1S7H));
     container1.add(hz);
 
-    button2.setXY(137, 83);
-    button2.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_FOLDER_48_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_FOLDER_48_ID));
-    container1.add(button2);
+    button_demo.setXY(137, 83);
+    button_demo.setBitmaps(touchgfx::Bitmap(BITMAP_BLUE_ICONS_FOLDER_48_ID), touchgfx::Bitmap(BITMAP_BLUE_ICONS_FOLDER_48_ID));
+    button_demo.setAction(buttonCallback);
+    container1.add(button_demo);
 
     add(__background);
     add(box1);
@@ -308,5 +315,34 @@ void SettingViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
         //When back clicked change screen to Main
         //Go to Main with no screen transition
         application().gotoMainScreenNoTransition();
+    }
+    else if (&src == &button_demo)
+    {
+        //demo
+        //When button_demo clicked call virtual function
+        //Call demo_callback
+        demo_callback();
+    }
+}
+
+void SettingViewBase::sliderValueChangedCallbackHandler(const touchgfx::Slider& src, int value)
+{
+    if (&src == &slider1)
+    {
+        //slider
+        //When slider1 value changed call virtual function
+        //Call slider_callback
+        slider_callback(value);
+    }
+}
+
+void SettingViewBase::sliderValueConfirmedCallbackHandler(const touchgfx::Slider& src, int value)
+{
+    if (&src == &slider1)
+    {
+        //slider_release
+        //When slider1 value confirmed call virtual function
+        //Call slider_release_callback
+        slider_release_callback(value);
     }
 }

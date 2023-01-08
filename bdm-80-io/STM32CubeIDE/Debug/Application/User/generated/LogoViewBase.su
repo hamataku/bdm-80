@@ -1,12 +1,10 @@
-Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
-Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
 Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	0	static
 Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
-LogoViewBase.hpp:18:13:LogoViewBase::~LogoViewBase()	0	static
-LogoViewBase.cpp:47:6:virtual void LogoViewBase::setupScreen()	0	static
-LogoViewBase.cpp:70:6:virtual void LogoViewBase::afterTransition()	0	static
+LogoViewBase.hpp:17:13:LogoViewBase::~LogoViewBase()	0	static
+LogoViewBase.cpp:34:6:virtual void LogoViewBase::setupScreen()	0	static
+LogoViewBase.cpp:57:6:virtual void LogoViewBase::afterTransition()	0	static
 TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
-LogoViewBase.hpp:18:13:virtual LogoViewBase::~LogoViewBase()	8	static
-LogoViewBase.cpp:53:6:virtual void LogoViewBase::handleTickEvent()	8	static
-LogoViewBase.cpp:9:1:LogoViewBase::LogoViewBase()	72	static
+LogoViewBase.hpp:17:13:virtual LogoViewBase::~LogoViewBase()	8	static
+LogoViewBase.cpp:40:6:virtual void LogoViewBase::handleTickEvent()	8	static
+LogoViewBase.cpp:8:1:LogoViewBase::LogoViewBase()	56	static
