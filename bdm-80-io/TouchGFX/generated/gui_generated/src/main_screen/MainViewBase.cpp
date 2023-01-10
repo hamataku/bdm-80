@@ -7,6 +7,7 @@
 #include <texts/TextKeysAndLanguages.hpp>
 
 MainViewBase::MainViewBase() :
+    frameCountupdateInterval(0),
     buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
 
@@ -243,10 +244,15 @@ void MainViewBase::setupScreen()
 //Handles tick based events
 void MainViewBase::handleTickEvent()
 {
-    //update
-    //When every N tick call virtual function
-    //Call update
-    update();
+    frameCountupdateInterval++;
+    if(frameCountupdateInterval == TICK_UPDATE_INTERVAL)
+    {
+        //update
+        //When every N tick call virtual function
+        //Call update
+        update();
+        frameCountupdateInterval = 0;
+    }
 
 }
 

@@ -42,7 +42,7 @@ MainViewBase.hpp:138:18:virtual void MainViewBase::read_incr_callback()	0	static
 MainViewBase.hpp:143:18:virtual void MainViewBase::read_decr_callback()	0	static
 MainViewBase.hpp:148:18:virtual void MainViewBase::write_incr_callback()	0	static
 MainViewBase.hpp:153:18:virtual void MainViewBase::update()	0	static
-MainViewBase.cpp:238:6:virtual void MainViewBase::setupScreen()	0	static
+MainViewBase.cpp:239:6:virtual void MainViewBase::setupScreen()	0	static
 Callback.hpp:357:8:touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::ButtonWithLabel>::~ClickListener()	0	static
 Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = MainViewBase; T1 = const touchgfx::AbstractButton&]	8	static
@@ -53,7 +53,7 @@ Callback.hpp:357:8:virtual touchgfx::Callback<MainViewBase, const touchgfx::Abst
 MainViewBase.hpp:21:13:virtual MainViewBase::~MainViewBase()	8	static
 Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	0	static
 ClickListener.hpp:49:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ButtonWithLabel]	16	static
-MainViewBase.cpp:244:6:virtual void MainViewBase::handleTickEvent()	0	static
-MainViewBase.cpp:253:6:void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+MainViewBase.cpp:245:6:virtual void MainViewBase::handleTickEvent()	8	static
+MainViewBase.cpp:259:6:void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	16	static
 MainViewBase.cpp:9:1:MainViewBase::MainViewBase()	184	static

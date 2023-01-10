@@ -4,8 +4,21 @@ Hexadecimal [16-Bits]
 Symbol Table
 
     .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
-    .__.H$L.=  0000 L   |   3 loop       8003 R   |   3 main       8000 R
-  2 start      0000 R
+    .__.H$L.=  0000 L   |     BCD_RESU=  F000     |   3 MAIN       8000 R
+  3 MAIN2      8017 R   |   3 MPADD      801A R   |   3 MPADD_L1   8024 R
+  3 MPDIV15    8044 R   |   3 MPDIV15_   8052 R   |   3 MPDIV15_   805D R
+  3 MPDIV15_   8065 R   |   3 MPDIV15_   806D R   |   3 MPDIV15_   8075 R
+  3 MPDIV15_   807D R   |   3 MPDIV15_   8085 R   |   3 MPDIV15_   808D R
+  3 MPDIV15_   8095 R   |   3 MPDIV16    80A0 R   |   3 MPDIV16_   80B5 R
+  3 MPDIV16_   80C1 R   |   3 MPDIV16_   80C6 R   |   3 MPDIV16_   80CF R
+  3 MPDIV16_   80D4 R   |   3 MPDIV16_   80DD R   |   3 MPDIV16_   80E2 R
+  3 MPDIV16_   80EB R   |   3 MPDIV16_   80F0 R   |   3 MPDIV16_   80F9 R
+  3 MPDIV16_   80FE R   |   3 MPDIV16_   8107 R   |   3 MPDIV16_   810C R
+  3 MPDIV16_   8115 R   |   3 MPDIV16_   811A R   |   3 MPDIV16_   8123 R
+  3 MPDIV16_   8128 R   |   3 MPSUB      802F R   |   3 MPSUB_L1   8039 R
+    PBIN_SIZ=  0008     |   2 START      0000 R   |     WORK1   =  1000 
+    WORK2   =  6000     |     WORK3   =  B000     |     WORK_BAS=  0A00 
+    WORK_BAS=  000A 
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next), page 2.
 Hexadecimal [16-Bits]
@@ -15,5 +28,5 @@ Area Table
    0 _CODE      size    0   flags    0
    1 TEST       size    0   flags    8
    2 TEST0      size    B   flags    8
-   3 TEST1      size    F   flags    8
+   3 TEST1      size  133   flags    8
 

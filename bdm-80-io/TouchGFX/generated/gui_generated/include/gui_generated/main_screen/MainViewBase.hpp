@@ -197,6 +197,12 @@ protected:
 private:
 
     /*
+     * Tick Counter Declarations
+     */
+    static const uint32_t TICK_UPDATE_INTERVAL = 3;
+    uint32_t frameCountupdateInterval;
+
+    /*
      * Callback Declarations
      */
     touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&> buttonCallback;

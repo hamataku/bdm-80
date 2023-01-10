@@ -960,7 +960,7 @@
             "InteractionName": "update",
             "Trigger": {
               "Type": "TriggerOnEveryTick",
-              "TickCount": 1
+              "TickCount": 3
             },
             "Action": {
               "Type": "ActionCustom",

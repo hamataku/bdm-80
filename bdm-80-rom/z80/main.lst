@@ -6,23 +6,289 @@ Hexadecimal [16-Bits]
                               1 .z80
                               2 .area TEST(ABS)
                               3 
-   0000                       4 .org	0x0000
-   0000                       5 start:
-   0000 21 00 01      [10]    6   ld hl,#0x100
-   0003 7E            [ 7]    7   ld a,(hl)
-   0004 21 01 01      [10]    8   ld hl,#0x101
-   0007 46            [ 7]    9   ld b,(hl)
-   0008 67            [ 4]   10   ld h,a
-   0009 68            [ 4]   11   ld l,b
-   000A E9            [ 4]   12   jp (hl)
-                             13 
-   8000                      14 .org	0x8000
-   8000                      15 main:
-   8000 01 00 00      [10]   16   ld bc,#0x0
-   8003                      17 loop:
-   8003 03            [ 6]   18   inc bc
-   8004 21 FC FF      [10]   19   ld hl,#0xfffc
-   8007 70            [ 7]   20   ld (hl),b
-   8008 21 FD FF      [10]   21   ld hl,#0xfffd
-   800B 71            [ 7]   22   ld (hl),c
-   800C C3 03 80      [10]   23   jp loop
+                     1000     4 WORK1		.EQU 0x1000
+                     6000     5 WORK2		.EQU 0x6000
+                     B000     6 WORK3		.EQU 0xB000
+                     F000     7 BCD_RESULT	.EQU 0xf000
+                     000A     8 WORK_BASE_H	.EQU 0xA
+                              9 
+                     0A00    10 WORK_BASE	.EQU WORK_BASE_H*0x100
+                     0008    11 PBIN_SIZE	.EQU 8
+                             12 
+   0000                      13 .ORG	0x0000
+   0000                      14 START:
+   0000 21 00 01      [10]   15   LD HL,#0x100
+   0003 7E            [ 7]   16   LD A,(HL)
+   0004 21 01 01      [10]   17   LD HL,#0x101
+   0007 46            [ 7]   18   LD B,(HL)
+   0008 67            [ 4]   19   LD H,A
+   0009 68            [ 4]   20   LD L,B
+   000A E9            [ 4]   21   jp (HL)
+                             22 
+   8000                      23 .org	0x8000
+   8000                      24 MAIN:
+   8000 21 00 10      [10]   25   LD HL,#WORK1
+   8003 36 03         [10]   26   LD (HL),#0x3
+   8005 21 00 B0      [10]   27   LD HL,#WORK3
+   8008 36 02         [10]   28   LD (HL),#0x2
+   800A 21 00 B0      [10]   29   LD HL,#WORK3
+   800D 11 00 10      [10]   30   LD DE,#WORK1
+   8010 ED 4B 08 00   [20]   31   LD BC,(#PBIN_SIZE)
+   8014 CD 1A 80      [17]   32   CALL MPADD
+   8017                      33 MAIN2:
+   8017 C3 17 80      [10]   34   JP MAIN2
+                             35 
+                             36 ; [DE..DE+BC-1] += [HL..HL+BC-1]
+   801A                      37 MPADD:
+   801A 0B            [ 6]   38 	DEC BC
+   801B 09            [11]   39 	ADD HL,BC
+   801C EB            [ 4]   40 	EX DE,HL
+   801D 09            [11]   41 	ADD HL,BC
+   801E EB            [ 4]   42 	EX DE,HL
+   801F 0C            [ 4]   43 	INC C
+   8020 04            [ 4]   44 	INC B
+   8021 79            [ 4]   45 	LD A,C
+   8022 48            [ 4]   46 	LD C,B
+   8023 47            [ 4]   47 	LD B,A
+   8024                      48 MPADD_L1:
+   8024 1A            [ 7]   49 	LD A,(DE)
+   8025 8E            [ 7]   50 	ADC A,(HL)
+   8026 12            [ 7]   51 	LD (DE),A
+   8027 1B            [ 6]   52 	DEC DE
+   8028 2B            [ 6]   53 	DEC HL
+   8029 10 F9         [13]   54 	DJNZ MPADD_L1
+   802B 0D            [ 4]   55 	DEC C
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next), page 2.
+Hexadecimal [16-Bits]
+
+
+
+   802C 20 F6         [12]   56 	JR NZ,MPADD_L1
+   802E C9            [10]   57 	RET
+                             58 
+                             59 ; [DE..DE+BC-1] -= [HL..HL+BC-1]
+   802F                      60 MPSUB:
+   802F 0B            [ 6]   61 	DEC BC
+   8030 09            [11]   62 	ADD HL,BC
+   8031 EB            [ 4]   63 	EX DE,HL
+   8032 09            [11]   64 	ADD HL,BC
+   8033 EB            [ 4]   65 	EX DE,HL
+   8034 0C            [ 4]   66 	INC C
+   8035 04            [ 4]   67 	INC B
+   8036 79            [ 4]   68 	LD A,C
+   8037 48            [ 4]   69 	LD C,B
+   8038 47            [ 4]   70 	LD B,A
+   8039                      71 MPSUB_L1:
+   8039 1A            [ 7]   72 	LD A,(DE)
+   803A 9E            [ 7]   73 	SBC A,(HL)
+   803B 12            [ 7]   74 	LD (DE),A
+   803C 1B            [ 6]   75 	DEC DE
+   803D 2B            [ 6]   76 	DEC HL
+   803E 10 F9         [13]   77 	DJNZ MPSUB_L1
+   8040 0D            [ 4]   78 	DEC C
+   8041 20 F6         [12]   79 	JR NZ,MPSUB_L1
+   8043 C9            [10]   80 	RET
+                             81 
+                             82 ; [DE..DE+BC-1] = [HL..HL+BC-1] / IX (IX < 8000H)
+   8044                      83 MPDIV15:
+   8044 0B            [ 6]   84 	DEC BC
+   8045 0C            [ 4]   85 	INC C
+   8046 04            [ 4]   86 	INC B
+   8047 79            [ 4]   87 	LD A,C
+   8048 48            [ 4]   88 	LD C,B
+   8049 47            [ 4]   89 	LD B,A
+   804A DD E5         [15]   90 	PUSH IX
+   804C D9            [ 4]   91 	EXX
+   804D D1            [10]   92 	POP DE
+   804E 21 00 00      [10]   93 	LD HL,#0x0
+   8051 D9            [ 4]   94 	EXX
+   8052                      95 MPDIV15_L1:
+   8052 7E            [ 7]   96 	LD A,(HL)
+   8053 23            [ 6]   97 	INC HL
+   8054 D9            [ 4]   98 	EXX
+   8055 87            [ 4]   99 	ADD A,A
+   8056 ED 6A         [15]  100 	ADC HL,HL
+   8058 ED 52         [15]  101 	SBC HL,DE
+   805A 30 01         [12]  102 	JR NC,MPDIV15_LB1
+   805C 19            [11]  103 	ADD HL,DE
+   805D                     104 MPDIV15_LB1:
+   805D 8F            [ 4]  105 	ADC A,A
+   805E ED 6A         [15]  106 	ADC HL,HL
+   8060 ED 52         [15]  107 	SBC HL,DE
+   8062 30 01         [12]  108 	JR NC,MPDIV15_LB2
+   8064 19            [11]  109 	ADD HL,DE
+   8065                     110 MPDIV15_LB2:
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next), page 3.
+Hexadecimal [16-Bits]
+
+
+
+   8065 8F            [ 4]  111 	ADC A,A
+   8066 ED 6A         [15]  112 	ADC HL,HL
+   8068 ED 52         [15]  113 	SBC HL,DE
+   806A 30 01         [12]  114 	JR NC,MPDIV15_LB3
+   806C 19            [11]  115 	ADD HL,DE
+   806D                     116 MPDIV15_LB3:
+   806D 8F            [ 4]  117 	ADC A,A
+   806E ED 6A         [15]  118 	ADC HL,HL
+   8070 ED 52         [15]  119 	SBC HL,DE
+   8072 30 01         [12]  120 	JR NC,MPDIV15_LB4
+   8074 19            [11]  121 	ADD HL,DE
+   8075                     122 MPDIV15_LB4:
+   8075 8F            [ 4]  123 	ADC A,A
+   8076 ED 6A         [15]  124 	ADC HL,HL
+   8078 ED 52         [15]  125 	SBC HL,DE
+   807A 30 01         [12]  126 	JR NC,MPDIV15_LB5
+   807C 19            [11]  127 	ADD HL,DE
+   807D                     128 MPDIV15_LB5:
+   807D 8F            [ 4]  129 	ADC A,A
+   807E ED 6A         [15]  130 	ADC HL,HL
+   8080 ED 52         [15]  131 	SBC HL,DE
+   8082 30 01         [12]  132 	JR NC,MPDIV15_LB6
+   8084 19            [11]  133 	ADD HL,DE
+   8085                     134 MPDIV15_LB6:
+   8085 8F            [ 4]  135 	ADC A,A
+   8086 ED 6A         [15]  136 	ADC HL,HL
+   8088 ED 52         [15]  137 	SBC HL,DE
+   808A 30 01         [12]  138 	JR NC,MPDIV15_LB7
+   808C 19            [11]  139 	ADD HL,DE
+   808D                     140 MPDIV15_LB7:
+   808D 8F            [ 4]  141 	ADC A,A
+   808E ED 6A         [15]  142 	ADC HL,HL
+   8090 ED 52         [15]  143 	SBC HL,DE
+   8092 30 01         [12]  144 	JR NC,MPDIV15_LB8
+   8094 19            [11]  145 	ADD HL,DE
+   8095                     146 MPDIV15_LB8:
+   8095 8F            [ 4]  147 	ADC A,A
+   8096 2F            [ 4]  148 	CPL
+   8097 D9            [ 4]  149 	EXX
+   8098 12            [ 7]  150 	LD (DE),A
+   8099 13            [ 6]  151 	INC DE
+   809A 10 B6         [13]  152 	DJNZ MPDIV15_L1
+   809C 0D            [ 4]  153 	DEC C
+   809D 20 B3         [12]  154 	JR NZ,MPDIV15_L1
+   809F C9            [10]  155 	RET
+                            156 
+                            157 ; [DE..DE+BC-1] = [HL..HL+BC-1] / IX
+   80A0                     158 MPDIV16:
+   80A0 0B            [ 6]  159 	DEC BC
+   80A1 0C            [ 4]  160 	INC C
+   80A2 04            [ 4]  161 	INC B
+   80A3 79            [ 4]  162 	LD A,C
+   80A4 48            [ 4]  163 	LD C,B
+   80A5 47            [ 4]  164 	LD B,A
+   80A6 DD E5         [15]  165 	PUSH IX
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next), page 4.
+Hexadecimal [16-Bits]
+
+
+
+   80A8 D9            [ 4]  166 	EXX
+   80A9 D1            [10]  167 	POP DE
+   80AA 7B            [ 4]  168 	LD A,E
+   80AB 2F            [ 4]  169 	CPL
+   80AC 4F            [ 4]  170 	LD C,A
+   80AD 7A            [ 4]  171 	LD A,D
+   80AE 2F            [ 4]  172 	CPL
+   80AF 47            [ 4]  173 	LD B,A
+   80B0 03            [ 6]  174 	INC BC
+   80B1 21 00 00      [10]  175 	LD HL,#0x0
+   80B4 D9            [ 4]  176 	EXX
+   80B5                     177 MPDIV16_L1:
+   80B5 7E            [ 7]  178 	LD A,(HL)
+   80B6 23            [ 6]  179 	INC HL
+   80B7 D9            [ 4]  180 	EXX
+   80B8 87            [ 4]  181 	ADD A,A
+   80B9 ED 6A         [15]  182 	ADC HL,HL
+   80BB 30 04         [12]  183 	JR NC,MPDIV16_LB1_1
+   80BD 09            [11]  184 	ADD HL,BC
+   80BE C3 C6 80      [10]  185 	JP MPDIV16_LB1_2
+   80C1                     186 MPDIV16_LB1_1:
+   80C1 ED 52         [15]  187 	SBC HL,DE
+   80C3 30 01         [12]  188 	JR NC,MPDIV16_LB1_2
+   80C5 19            [11]  189 	ADD HL,DE
+   80C6                     190 MPDIV16_LB1_2:
+   80C6 8F            [ 4]  191 	ADC A,A
+   80C7 ED 6A         [15]  192 	ADC HL,HL
+   80C9 30 04         [12]  193 	JR NC,MPDIV16_LB2_1
+   80CB 09            [11]  194 	ADD HL,BC
+   80CC C3 D4 80      [10]  195 	JP MPDIV16_LB2_2
+   80CF                     196 MPDIV16_LB2_1:
+   80CF ED 52         [15]  197 	SBC HL,DE
+   80D1 30 01         [12]  198 	JR NC,MPDIV16_LB2_2
+   80D3 19            [11]  199 	ADD HL,DE
+   80D4                     200 MPDIV16_LB2_2:
+   80D4 8F            [ 4]  201 	ADC A,A
+   80D5 ED 6A         [15]  202 	ADC HL,HL
+   80D7 30 04         [12]  203 	JR NC,MPDIV16_LB3_1
+   80D9 09            [11]  204 	ADD HL,BC
+   80DA C3 E2 80      [10]  205 	JP MPDIV16_LB3_2
+   80DD                     206 MPDIV16_LB3_1:
+   80DD ED 52         [15]  207 	SBC HL,DE
+   80DF 30 01         [12]  208 	JR NC,MPDIV16_LB3_2
+   80E1 19            [11]  209 	ADD HL,DE
+   80E2                     210 MPDIV16_LB3_2:
+   80E2 8F            [ 4]  211 	ADC A,A
+   80E3 ED 6A         [15]  212 	ADC HL,HL
+   80E5 30 04         [12]  213 	JR NC,MPDIV16_LB4_1
+   80E7 09            [11]  214 	ADD HL,BC
+   80E8 C3 F0 80      [10]  215 	JP MPDIV16_LB4_2
+   80EB                     216 MPDIV16_LB4_1:
+   80EB ED 52         [15]  217 	SBC HL,DE
+   80ED 30 01         [12]  218 	JR NC,MPDIV16_LB4_2
+   80EF 19            [11]  219 	ADD HL,DE
+   80F0                     220 MPDIV16_LB4_2:
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next), page 5.
+Hexadecimal [16-Bits]
+
+
+
+   80F0 8F            [ 4]  221 	ADC A,A
+   80F1 ED 6A         [15]  222 	ADC HL,HL
+   80F3 30 04         [12]  223 	JR NC,MPDIV16_LB5_1
+   80F5 09            [11]  224 	ADD HL,BC
+   80F6 C3 FE 80      [10]  225 	JP MPDIV16_LB5_2
+   80F9                     226 MPDIV16_LB5_1:
+   80F9 ED 52         [15]  227 	SBC HL,DE
+   80FB 30 01         [12]  228 	JR NC,MPDIV16_LB5_2
+   80FD 19            [11]  229 	ADD HL,DE
+   80FE                     230 MPDIV16_LB5_2:
+   80FE 8F            [ 4]  231 	ADC A,A
+   80FF ED 6A         [15]  232 	ADC HL,HL
+   8101 30 04         [12]  233 	JR NC,MPDIV16_LB6_1
+   8103 09            [11]  234 	ADD HL,BC
+   8104 C3 0C 81      [10]  235 	JP MPDIV16_LB6_2
+   8107                     236 MPDIV16_LB6_1:
+   8107 ED 52         [15]  237 	SBC HL,DE
+   8109 30 01         [12]  238 	JR NC,MPDIV16_LB6_2
+   810B 19            [11]  239 	ADD HL,DE
+   810C                     240 MPDIV16_LB6_2:
+   810C 8F            [ 4]  241 	ADC A,A
+   810D ED 6A         [15]  242 	ADC HL,HL
+   810F 30 04         [12]  243 	JR NC,MPDIV16_LB7_1
+   8111 09            [11]  244 	ADD HL,BC
+   8112 C3 1A 81      [10]  245 	JP MPDIV16_LB7_2
+   8115                     246 MPDIV16_LB7_1:
+   8115 ED 52         [15]  247 	SBC HL,DE
+   8117 30 01         [12]  248 	JR NC,MPDIV16_LB7_2
+   8119 19            [11]  249 	ADD HL,DE
+   811A                     250 MPDIV16_LB7_2:
+   811A 8F            [ 4]  251 	ADC A,A
+   811B ED 6A         [15]  252 	ADC HL,HL
+   811D 30 04         [12]  253 	JR NC,MPDIV16_LB8_1
+   811F 09            [11]  254 	ADD HL,BC
+   8120 C3 28 81      [10]  255 	JP MPDIV16_LB8_2
+   8123                     256 MPDIV16_LB8_1:
+   8123 ED 52         [15]  257 	SBC HL,DE
+   8125 30 01         [12]  258 	JR NC,MPDIV16_LB8_2
+   8127 19            [11]  259 	ADD HL,DE
+   8128                     260 MPDIV16_LB8_2:
+   8128 8F            [ 4]  261 	ADC A,A
+   8129 2F            [ 4]  262 	CPL
+   812A D9            [ 4]  263 	EXX
+   812B 12            [ 7]  264 	LD (DE),A
+   812C 13            [ 6]  265 	INC DE
+   812D 10 86         [13]  266 	DJNZ MPDIV16_L1
+   812F 0D            [ 4]  267 	DEC C
+   8130 20 83         [12]  268 	JR NZ,MPDIV16_L1
+   8132 C9            [10]  269 	RET
