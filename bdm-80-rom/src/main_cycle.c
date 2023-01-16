@@ -8,6 +8,7 @@
 #include "gpio.h"
 #include "tim.h"
 #include "clock.h"
+#include "tm1630.h"
 
 uint32_t moder_output = 0;
 uint32_t moder_input = 0;
@@ -63,7 +64,12 @@ void main_init(void)
     __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, htim1.Init.Period / 2);
 
     HAL_TIM_Base_Stop_IT(&htim2);
-    main_setFrequency(10);
+
+    // データ表示の初期化
+    TM1630_Init();
+    HAL_TIM_Base_Start_IT(&htim3);
+
+    main_setFrequency(1);
 }
 
 void main_reset()
@@ -100,25 +106,6 @@ void main_callback(void)
         DATA_PORT->MODER = moder_input;
         address = ADDR_PORT->IDR;
         data[address] = (uint8_t)(DATA_PORT->IDR);
-
-        if (address >= 0xfffc && last_send_address != address) {
-            // LCD表示
-            if (address <= 0xfffd) {
-                if (last_send_data_up != data[0xfffd] || last_send_data_down != data[0xfffc]) {
-                    last_send_address = address;
-                    last_send_data_up = data[0xfffd];
-                    last_send_data_down = data[0xfffc];
-                    printf("k%x\n", data[0xfffd] << 8 | data[0xfffc]);
-                }
-            } else {
-                if (last_send_data_up != data[0xffff] || last_send_data_down != data[0xfffe]) {
-                    last_send_address = address;
-                    last_send_data_up = data[0xffff];
-                    last_send_data_down = data[0xfffe];
-                    printf("l%x\n", data[0xffff] << 8 | data[0xfffe]);
-                }
-            }
-        }
     } else if ((GPIOA->IDR & (MREQ_Pin | RD_Pin | WR_Pin)) == WR_Pin) {
         // read
         DATA_PORT->MODER = moder_output;
@@ -134,7 +121,7 @@ void main_setFrequency(uint32_t freq)
 {
     freq = freq > 1000000 ? 1000000 : freq;
     freq = freq < 1 ? 1 : freq;
-    uint32_t period = (uint32_t)(2000000 / freq) - 1;
+    uint32_t period = (uint32_t)(42000000 / freq) - 1;
     __HAL_TIM_SetAutoreload(&htim2, period);
     printf("freq %lu\n", freq);
 }

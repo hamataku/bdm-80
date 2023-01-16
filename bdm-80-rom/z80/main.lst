@@ -29,99 +29,90 @@ Hexadecimal [16-Bits]
    0009 68            [ 4]   24   LD L,B
    000A E9            [ 4]   25   JP (HL)
                              26 
-   1000                      27 .ORG	0x1000
-   1000                      28 START1:
-   1000 01 FF FF      [10]   29   LD BC,#0xffff
-   1003 3E 0F         [ 7]   30   LD A,#0b00001111 ; PIOBモード0
-   1005 D3 0B         [11]   31   OUT (#PIOBC),A
-   1007 16 00         [ 7]   32   LD D,#0x00
-   1009 21 00 00      [10]   33   LD HL,#0x00
-   100C                      34 LOOP1:
-   100C 03            [ 6]   35   INC BC
-   100D ED 43 FE FF   [20]   36   LD (#DISPD),BC ;　データ表示部にBCを出力
+   8000                      27 .ORG	0x8000
+   8000                      28 START1:
+   8000 01 FF FF      [10]   29   LD BC,#0xffff
+   8003 3E 0F         [ 7]   30   LD A,#0b00001111 ; PIOBモード0
+   8005 D3 0B         [11]   31   OUT (#PIOBC),A
+   8007 16 00         [ 7]   32   LD D,#0x00
+   8009 21 00 00      [10]   33   LD HL,#0x00
+   800C                      34 LOOP1:
+   800C 03            [ 6]   35   INC BC
+   800D ED 43 FE FF   [20]   36   LD (#DISPD),BC ;　データ表示部にBCを出力
                              37   ; check BC is 0
-   1011 78            [ 4]   38   LD A,B
-   1012 B1            [ 4]   39   OR C
-   1013 20 F7         [12]   40   JR NZ,LOOP1
+   8011 78            [ 4]   38   LD A,B
+   8012 B1            [ 4]   39   OR C
+   8013 20 F7         [12]   40   JR NZ,LOOP1
                              41   ; BC = 0
-   1015 3E 01         [ 7]   42   LD A,#0x01
-   1017 AA            [ 4]   43   XOR D
-   1018 57            [ 4]   44   LD D,A
-   1019 D3 09         [11]   45   OUT (#PIOBD),A
-   101B 22 FC FF      [16]   46   LD (#DISPA),HL ; アドレス表示部にHLを出力
-   101E 23            [ 6]   47   INC HL
-   101F C3 0C 10      [10]   48   JP LOOP1
+   8015 3E 01         [ 7]   42   LD A,#0x01
+   8017 AA            [ 4]   43   XOR D
+   8018 57            [ 4]   44   LD D,A
+   8019 D3 09         [11]   45   OUT (#PIOBD),A
+   801B 22 FC FF      [16]   46   LD (#DISPA),HL ; アドレス表示部にHLを出力
+   801E 23            [ 6]   47   INC HL
+   801F C3 0C 80      [10]   48   JP LOOP1
                              49 
-   2000                      50 .ORG	0x2000
-   2000                      51 start2:
-   2000 31 00 00      [10]   52 	ld	sp,#0x0000
-   2003 CD 18 20      [17]   53 	call	sioinit
-   2006                      54 main2:
-   2006 3E 4F         [ 7]   55 	ld	a,#"O"
+   9000                      50 .ORG	0x9000
+   9000                      51 start2:
+   9000 31 00 00      [10]   52   ld	sp,#0x0000
+   9003 CD 18 90      [17]   53   call	sioinit
+   9006                      54 main2:
+   9006 3E 4F         [ 7]   55   ld	a,#"O"
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 2.
 Hexadecimal [16-Bits]
 
 
 
-   2008 CD 34 20      [17]   56 	call	com_out
-   200B 3E 4B         [ 7]   57 	ld	a,#"K"
-   200D CD 34 20      [17]   58 	call	com_out
-   2010                      59 loop2:
-   2010 CD 2B 20      [17]   60   call	com_in
-   2013 CD 34 20      [17]   61 	call	com_out
-   2016 18 F8         [12]   62 	jr	loop2
-   2018                      63 sioinit:
-   2018 06 0B         [ 7]   64 	ld	b,#0x0b
-   201A 0E 07         [ 7]   65 	ld	c,#SIOBC
-   201C 21 48 20      [10]   66 	ld	hl,#SIO_INIT_TB_B
-   201F ED B3         [21]   67 	otir
-   2021 06 09         [ 7]   68 	ld	b,#0x09
-   2023 0E 06         [ 7]   69 	ld	c,#SIOAC
-   2025 21 3F 20      [10]   70 	ld	hl,#SIO_INIT_TB_A
-   2028 ED B3         [21]   71 	otir	
-   202A C9            [10]   72 	ret
-                             73 	
-   202B                      74 com_in:	
-   202B DB 06         [11]   75   in  a,(SIOAC)
-   202D CB 47         [ 8]   76 	bit	0,a
-   202F 28 FA         [12]   77   jr  z,com_in
-   2031 DB 04         [11]   78 	in  a,(SIOAD)
-   2033 C9            [10]   79 	ret
-                             80 
-   2034                      81 com_out:
-   2034 F5            [11]   82   push	af
-   2035                      83 com_out01:
-   2035 DB 06         [11]   84 	in  a,(SIOAC)
-   2037 CB 57         [ 8]   85   bit  2,a
-   2039 28 FA         [12]   86   jr  z,com_out01
-   203B F1            [10]   87 	pop	af
-   203C D3 04         [11]   88   out  (SIOAD),a
-   203E C9            [10]   89 	ret
-                             90 
-   203F                      91 SIO_INIT_TB_A:
-   203F 18                   92 	.db	0x18		;ch RESET
-   2040 14                   93 	.db	0x14		;WR4 set ,int reset
-   2041 44                   94 	.db	0b01000100	;x16 8bitchar 1stopbit nonparity
-   2042 03                   95 	.db	0x03		;WR3 set
-   2043 C1                   96 	.db	0b11000001	;rx 8bit char ,RxEnable
-   2044 05                   97 	.db	0x05		;WR5 set
-   2045 68                   98 	.db	0b01101000	;tx 8bit char ,TxEnable ,DTR=0 ,RTS=0
-   2046 11                   99 	.db	0x11		;WR1 set ,int reset
-   2047 00                  100 	.db	0b00000000	;non int
-   2048                     101 SIO_INIT_TB_B:
-   2048 18                  102 	.db	0x18		;ch RESET
-   2049 02                  103 	.db	0x02		;WR2 set
-   204A 00                  104 	.db	0x00		;int tabel 0x00
-   204B 14                  105 	.db	0x14		;WR4 set ,int reset
-   204C 44                  106 	.db	0b01000100	;x16 8bitchar 1stopbit nonparity
-   204D 03                  107 	.db	0x03		;WR3 set
-   204E C1                  108 	.db	0b11000001	;rx 8bit char ,RxEnable
-   204F 05                  109 	.db	0x05		;WR5 set
-   2050 68                  110 	.db	0b01101000	;tx 8bit char ,TxEnable ,DTR=0 ,RTS=0
-ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 3.
-Hexadecimal [16-Bits]
-
-
-
-   2051 11                  111 	.db	0x11		;WR1 set ,int reset
-   2052 00                  112 	.db	0b00000000	;non int
+   9008 CD 2B 90      [17]   56   call	com_out
+   900B 3E 4B         [ 7]   57   ld	a,#"K"
+   900D CD 2B 90      [17]   58   call	com_out
+   9010                      59 loop2:
+   9010 CD 22 90      [17]   60   call	com_in
+   9013 CD 2B 90      [17]   61   call	com_out
+   9016 18 F8         [12]   62   jr	loop2
+   9018                      63 sioinit:
+   9018 06 09         [ 7]   64   ld	b,#0x09
+   901A 0E 06         [ 7]   65   ld	c,#SIOAC
+   901C 21 36 90      [10]   66   ld	hl,#SIO_INIT_TB_A
+   901F ED B3         [21]   67   otir	
+   9021 C9            [10]   68   ret
+                             69 	
+   9022                      70 com_in:	
+   9022 DB 06         [11]   71   in  a,(SIOAC)
+   9024 CB 47         [ 8]   72 	bit	0,a
+   9026 28 FA         [12]   73   jr  z,com_in
+   9028 DB 04         [11]   74 	in  a,(SIOAD)
+   902A C9            [10]   75 	ret
+                             76 
+   902B                      77 com_out:
+   902B F5            [11]   78   push	af
+   902C                      79 com_out01:
+   902C DB 06         [11]   80 	in  a,(SIOAC)
+   902E CB 57         [ 8]   81   bit  2,a
+   9030 28 FA         [12]   82   jr  z,com_out01
+   9032 F1            [10]   83 	pop	af
+   9033 D3 04         [11]   84   out  (SIOAD),a
+   9035 C9            [10]   85 	ret
+                             86 
+   9036                      87 SIO_INIT_TB_A:
+   9036 18                   88 	.db	0x18		;ch RESET
+   9037 14                   89 	.db	0x14		;WR4 set ,int reset
+   9038 44                   90 	.db	0b01000100	;x16 8bitchar 1stopbit nonparity
+   9039 03                   91 	.db	0x03		;WR3 set
+   903A C1                   92 	.db	0b11000001	;rx 8bit char ,RxEnable
+   903B 05                   93 	.db	0x05		;WR5 set
+   903C 68                   94 	.db	0b01101000	;tx 8bit char ,TxEnable ,DTR=0 ,RTS=0
+   903D 11                   95 	.db	0x11		;WR1 set ,int reset
+   903E 00                   96 	.db	0b00000000	;non int
+   903F                      97 SIO_INIT_TB_B:
+   903F 18                   98 	.db	0x18		;ch RESET
+   9040 02                   99 	.db	0x02		;WR2 set
+   9041 00                  100 	.db	0x00		;int tabel 0x00
+   9042 14                  101 	.db	0x14		;WR4 set ,int reset
+   9043 44                  102 	.db	0b01000100	;x16 8bitchar 1stopbit nonparity
+   9044 03                  103 	.db	0x03		;WR3 set
+   9045 C1                  104 	.db	0b11000001	;rx 8bit char ,RxEnable
+   9046 05                  105 	.db	0x05		;WR5 set
+   9047 68                  106 	.db	0b01101000	;tx 8bit char ,TxEnable ,DTR=0 ,RTS=0
+   9048 11                  107 	.db	0x11		;WR1 set ,int reset
+   9049 00                  108 	.db	0b00000000	;non int

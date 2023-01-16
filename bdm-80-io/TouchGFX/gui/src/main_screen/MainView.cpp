@@ -36,11 +36,11 @@ void MainView::update()
 
     if (data != data_current) {
         data_current = data;
-        TM1630_SetSeg1(data);
+        printf("D%x\n", data);
     }
     if (address != address_current) {
         address_current = address;
-        TM1630_SetSeg2(address);
+        printf("P%x\n", address);
     }
 }
 

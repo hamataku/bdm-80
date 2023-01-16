@@ -24,7 +24,7 @@ START:
   LD L,B
   JP (HL)
 
-.ORG	0x1000
+.ORG	0x8000
 START1:
   LD BC,#0xffff
   LD A,#0b00001111 ; PIOBモード0
@@ -47,29 +47,25 @@ LOOP1:
   INC HL
   JP LOOP1
 
-.ORG	0x2000
+.ORG	0x9000
 start2:
-	ld	sp,#0x0000
-	call	sioinit
+  ld	sp,#0x0000
+  call	sioinit
 main2:
-	ld	a,#"O"
-	call	com_out
-	ld	a,#"K"
-	call	com_out
+  ld	a,#"O"
+  call	com_out
+  ld	a,#"K"
+  call	com_out
 loop2:
   call	com_in
-	call	com_out
-	jr	loop2
+  call	com_out
+  jr	loop2
 sioinit:
-	ld	b,#0x0b
-	ld	c,#SIOBC
-	ld	hl,#SIO_INIT_TB_B
-	otir
-	ld	b,#0x09
-	ld	c,#SIOAC
-	ld	hl,#SIO_INIT_TB_A
-	otir	
-	ret
+  ld	b,#0x09
+  ld	c,#SIOAC
+  ld	hl,#SIO_INIT_TB_A
+  otir	
+  ret
 	
 com_in:	
   in  a,(SIOAC)

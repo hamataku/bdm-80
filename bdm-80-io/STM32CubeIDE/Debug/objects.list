@@ -99,5 +99,4 @@
 "./Middlewares/USB_Device_Library/usbd_ioreq.o"
 "./Src/TouchGFX_DataTransfer.o"
 "./Src/ili9341.o"
-"./Src/tm1630.o"
 "./Src/xpt2046.o"

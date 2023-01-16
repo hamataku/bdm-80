@@ -51,7 +51,6 @@ Application/User/gui/MainView.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp \
- C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
@@ -189,8 +188,6 @@ Application/User/gui/MainView.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/ClickListener.hpp:
-
-C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
 
 ../../Core/Inc/main.h:
 

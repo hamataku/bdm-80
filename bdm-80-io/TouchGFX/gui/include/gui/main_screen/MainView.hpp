@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 #ifndef SIMULATOR
-#include "tm1630.h"
+#include "main.h"
 #endif
 
 class MainView : public MainViewBase

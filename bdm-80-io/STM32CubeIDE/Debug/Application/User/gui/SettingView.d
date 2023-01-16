@@ -60,7 +60,6 @@ Application/User/gui/SettingView.o: \
  ../../TouchGFX/gui/include/gui/main_screen/MainView.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp \
  ../../TouchGFX/gui/include/gui/main_screen/MainPresenter.hpp \
- C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
@@ -216,8 +215,6 @@ Application/User/gui/SettingView.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/main_screen/MainViewBase.hpp:
 
 ../../TouchGFX/gui/include/gui/main_screen/MainPresenter.hpp:
-
-C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
 
 ../../Core/Inc/main.h:
 

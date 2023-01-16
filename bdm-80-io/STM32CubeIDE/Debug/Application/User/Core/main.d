@@ -41,8 +41,7 @@ Application/User/Core/main.o: \
  ../../USB_DEVICE/Target/usbd_conf.h ../../Core/Inc/gpio.h \
  ../../TouchGFX/App/app_touchgfx.h \
  C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/ili9341.h \
- C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/xpt2046.h \
- C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h
+ C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/xpt2046.h
 
 ../../Core/Inc/main.h:
 
@@ -137,5 +136,3 @@ Application/User/Core/main.o: \
 C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/ili9341.h:
 
 C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/xpt2046.h:
-
-C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:

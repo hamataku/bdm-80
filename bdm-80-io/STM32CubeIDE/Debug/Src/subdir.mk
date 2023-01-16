@@ -7,19 +7,16 @@
 C_SRCS += \
 ../Src/TouchGFX_DataTransfer.c \
 ../Src/ili9341.c \
-../Src/tm1630.c \
 ../Src/xpt2046.c 
 
 C_DEPS += \
 ./Src/TouchGFX_DataTransfer.d \
 ./Src/ili9341.d \
-./Src/tm1630.d \
 ./Src/xpt2046.d 
 
 OBJS += \
 ./Src/TouchGFX_DataTransfer.o \
 ./Src/ili9341.o \
-./Src/tm1630.o \
 ./Src/xpt2046.o 
 
 
@@ -30,7 +27,7 @@ Src/%.o: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/TouchGFX_DataTransfer.d ./Src/TouchGFX_DataTransfer.o ./Src/ili9341.d ./Src/ili9341.o ./Src/tm1630.d ./Src/tm1630.o ./Src/xpt2046.d ./Src/xpt2046.o
+	-$(RM) ./Src/TouchGFX_DataTransfer.d ./Src/TouchGFX_DataTransfer.o ./Src/ili9341.d ./Src/ili9341.o ./Src/xpt2046.d ./Src/xpt2046.o
 
 .PHONY: clean-Src
 

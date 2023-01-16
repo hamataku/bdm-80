@@ -9,6 +9,7 @@
 #include "stm32f4xx_it.h"
 #include "main_cycle.h"
 #include "tim.h"
+#include "tm1630.h"
 
 #define MAX_SIZE 256
 
@@ -76,6 +77,18 @@ void com_update()
         case 'f': {
             uint32_t freq = (uint32_t)strtol((char*)&receive[1], NULL, 10);
             main_setFrequency(freq);
+            break;
+        }
+        case 'P': {
+            uint16_t d = (uint16_t)strtol((char*)&receive[1], NULL, 16);
+            data[0xfffc] = (uint8_t)(d & 0xff);
+            data[0xfffd] = (uint8_t)(d >> 8);
+            break;
+        }
+        case 'D': {
+            uint16_t d = (uint16_t)strtol((char*)&receive[1], NULL, 16);
+            data[0xfffe] = (uint8_t)(d & 0xff);
+            data[0xffff] = (uint8_t)(d >> 8);
             break;
         }
         default:

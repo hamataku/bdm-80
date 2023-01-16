@@ -81,18 +81,6 @@ void Error_Handler(void);
 #define P_RESET_GPIO_Port GPIOC
 #define P_DC_Pin GPIO_PIN_7
 #define P_DC_GPIO_Port GPIOC
-#define SEG2_DIO_Pin GPIO_PIN_9
-#define SEG2_DIO_GPIO_Port GPIOC
-#define SEG2_CLK_Pin GPIO_PIN_8
-#define SEG2_CLK_GPIO_Port GPIOA
-#define SEG2_STB_Pin GPIO_PIN_9
-#define SEG2_STB_GPIO_Port GPIOA
-#define SEG1_STB_Pin GPIO_PIN_5
-#define SEG1_STB_GPIO_Port GPIOB
-#define SEG1_CLK_Pin GPIO_PIN_6
-#define SEG1_CLK_GPIO_Port GPIOB
-#define SEG1_DIO_Pin GPIO_PIN_7
-#define SEG1_DIO_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

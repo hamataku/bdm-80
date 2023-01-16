@@ -5,13 +5,13 @@ Symbol Table
 
     .__.$$$.=  2710 L   |     .__.ABS.=  0000 G   |     .__.CPU.=  0000 L
     .__.H$L.=  0000 L   |     DISPA   =  FFFC     |     DISPD   =  FFFE 
-  3 LOOP1      100C R   |     PIOAC   =  000A     |     PIOAD   =  0008 
+  3 LOOP1      800C R   |     PIOAC   =  000A     |     PIOAD   =  0008 
     PIOBC   =  000B     |     PIOBD   =  0009     |     SIOAC   =  0006 
     SIOAD   =  0004     |     SIOBC   =  0007     |     SIOBD   =  0005 
-  4 SIO_INIT   203F R   |   4 SIO_INIT   2048 R   |   2 START      0000 R
-  3 START1     1000 R   |   4 com_in     202B R   |   4 com_out    2034 R
-  4 com_out0   2035 R   |   4 loop2      2010 R   |   4 main2      2006 R
-  4 sioinit    2018 R   |   4 start2     2000 R
+  4 SIO_INIT   9036 R   |   4 SIO_INIT   903F R   |   2 START      0000 R
+  3 START1     8000 R   |   4 com_in     9022 R   |   4 com_out    902B R
+  4 com_out0   902C R   |   4 loop2      9010 R   |   4 main2      9006 R
+  4 sioinit    9018 R   |   4 start2     9000 R
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180 / ZX-Next / eZ80), page 2.
 Hexadecimal [16-Bits]
@@ -22,5 +22,5 @@ Area Table
    1 TEST       size    0   flags    8
    2 TEST0      size    B   flags    8
    3 TEST1      size   22   flags    8
-   4 TEST2      size   53   flags    8
+   4 TEST2      size   4A   flags    8
 
