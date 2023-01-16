@@ -72,6 +72,15 @@
               "ScreenTransitionDirection": "North",
               "ActionComponent": "Main"
             }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionNone"
+            }
           }
         ]
       },

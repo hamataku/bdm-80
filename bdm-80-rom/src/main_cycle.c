@@ -58,6 +58,10 @@ void main_init(void)
     // CPU RESET
     main_reset();
 
+    // SIO用のCLKを出力
+    HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
+    __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, htim1.Init.Period / 2);
+
     HAL_TIM_Base_Stop_IT(&htim2);
     main_setFrequency(10);
 }
@@ -72,8 +76,11 @@ void main_reset()
         // clock信号を3回以上入れる
         main_callback();
     }
+    if ((CLK_GPIO_Port->ODR & CLK_Pin) == 0) {
+        // clkを1にする
+        main_callback();
+    }
     HAL_GPIO_WritePin(RESET_GPIO_Port, RESET_Pin, GPIO_PIN_SET);
-    HAL_GPIO_WritePin(CLK_GPIO_Port, CLK_Pin, GPIO_PIN_SET);
 }
 
 void main_cycle(void)
@@ -97,18 +104,18 @@ void main_callback(void)
         if (address >= 0xfffc && last_send_address != address) {
             // LCD表示
             if (address <= 0xfffd) {
-                if (last_send_data_up != data[0xfffc] || last_send_data_down != data[0xfffd]) {
+                if (last_send_data_up != data[0xfffd] || last_send_data_down != data[0xfffc]) {
                     last_send_address = address;
-                    last_send_data_up = data[0xfffc];
-                    last_send_data_down = data[0xfffd];
-                    printf("k%x\n", data[0xfffc] << 8 | data[0xfffd]);
+                    last_send_data_up = data[0xfffd];
+                    last_send_data_down = data[0xfffc];
+                    printf("k%x\n", data[0xfffd] << 8 | data[0xfffc]);
                 }
             } else {
-                if (last_send_data_up != data[0xfffe] || last_send_data_down != data[0xffff]) {
+                if (last_send_data_up != data[0xffff] || last_send_data_down != data[0xfffe]) {
                     last_send_address = address;
-                    last_send_data_up = data[0xfffe];
-                    last_send_data_down = data[0xffff];
-                    printf("l%x\n", data[0xfffe] << 8 | data[0xffff]);
+                    last_send_data_up = data[0xffff];
+                    last_send_data_down = data[0xfffe];
+                    printf("l%x\n", data[0xffff] << 8 | data[0xfffe]);
                 }
             }
         }

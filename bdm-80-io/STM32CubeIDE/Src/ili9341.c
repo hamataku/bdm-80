@@ -65,7 +65,6 @@ static void LED_H(void);
 // Initialization
 void ILI9341_Init(void)
 {
-    HAL_Delay(300);
     ILI9341_Reset();
     ILI9341_SoftReset();
 

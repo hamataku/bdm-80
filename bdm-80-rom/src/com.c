@@ -46,9 +46,9 @@ void com_update()
             data[0x100] = (uint8_t)(p >> 8);
             data[0x101] = (uint8_t)(p & 0xff);
 
-            printf("k%x\n", (uint16_t)(data[0xfffc]) << 8 | data[0xfffd]);
+            printf("k%x\n", (uint16_t)(data[0xfffd]) << 8 | data[0xfffc]);
             HAL_Delay(10);
-            printf("l%x\n", (uint16_t)(data[0xfffe]) << 8 | data[0xffff]);
+            printf("l%x\n", (uint16_t)(data[0xffff]) << 8 | data[0xfffe]);
             main_reset();
             HAL_TIM_Base_Start_IT(&htim2);
             break;
