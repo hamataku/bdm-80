@@ -5,7 +5,7 @@ import os
 dirname = os.path.dirname(os.path.abspath(__file__))
 
 # asm build
-print("\033[32mz80 asm build\033[0m")
+print("\033[32mz80 zasm build\033[0m")
 subprocess.run('zasm -uwyx main.asm', cwd=dirname, shell=True)
 
 ih = IntelHex() 
