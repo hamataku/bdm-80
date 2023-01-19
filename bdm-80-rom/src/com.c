@@ -44,8 +44,8 @@ void com_update()
             break;
         case 's': {
             uint16_t p = (uint16_t)strtol((char*)&receive[1], NULL, 16);
-            data[0x100] = (uint8_t)(p >> 8);
-            data[0x101] = (uint8_t)(p & 0xff);
+            data[0xfffa] = (uint8_t)(p >> 8);
+            data[0xfffb] = (uint8_t)(p & 0xff);
 
             printf("k%x\n", (uint16_t)(data[0xfffd]) << 8 | data[0xfffc]);
             HAL_Delay(10);

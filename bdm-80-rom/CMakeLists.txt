@@ -63,13 +63,16 @@ add_custom_target(${PROJECT_NAME}.hex ALL
 if(EXISTS /proc/sys/fs/binfmt_misc/WSLInterop)
    # WINDOWS(WSL)
    add_custom_target(asm COMMAND python3 ../z80/hex2source.py COMMAND make -j4)
+   add_custom_target(zasm COMMAND python3 ../z80/hex2sourceZASM.py COMMAND make -j4)
    add_custom_target(write COMMAND python3 ../z80/hex2source.py COMMAND make -j4 COMMAND /mnt/c/Program\ Files/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/STM32_Programmer_CLI.exe -c port=SWD -hardRst -d ./${PROJECT_NAME}.elf -s )
 elseif(EXISTS /Applications/STMicroelectronics)
    # MAC
    add_custom_target(asm COMMAND python3 ../z80/hex2source.py COMMAND make -j4)
+   add_custom_target(zasm COMMAND python3 ../z80/hex2sourceZASM.py COMMAND make -j4)
    add_custom_target(write COMMAND python3 ../z80/hex2source.py COMMAND make -j4 COMMAND /Applications/STMicroelectronics/STM32Cube/STM32CubeProgrammer/STM32CubeProgrammer.app/Contents/MacOs/bin/STM32_Programmer_CLI -c port=SWD -hardRst -d ./${PROJECT_NAME}.elf -s )
 else()
    # Native LINUX
    add_custom_target(asm COMMAND python3 ../z80/hex2source.py COMMAND make -j4)
+   add_custom_target(zasm COMMAND python3 ../z80/hex2sourceZASM.py COMMAND make -j4)
    add_custom_target(write COMMAND python3 ../z80/hex2source.py COMMAND make -j4 COMMAND /usr/local/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/STM32_Programmer.sh -c port=SWD -hardRst -d ./${PROJECT_NAME}.elf -s )
 endif()
