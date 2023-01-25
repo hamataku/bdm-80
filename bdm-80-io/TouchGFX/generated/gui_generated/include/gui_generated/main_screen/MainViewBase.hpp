@@ -20,6 +20,7 @@ public:
     MainViewBase();
     virtual ~MainViewBase() {}
     virtual void setupScreen();
+    virtual void handleKeyEvent(uint8_t key);
     virtual void handleTickEvent();
 
     /*
@@ -155,6 +156,11 @@ public:
         // Override and implement this function in Main
     }
 
+    virtual void file_upload_check_callback()
+    {
+        // Override and implement this function in Main
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(touchgfx::Application::getInstance());
@@ -201,6 +207,8 @@ private:
      */
     static const uint32_t TICK_UPDATE_INTERVAL = 3;
     uint32_t frameCountupdateInterval;
+    static const uint32_t TICK_FILE_UPLOAD_INTERVAL = 60;
+    uint32_t frameCountfile_uploadInterval;
 
     /*
      * Callback Declarations

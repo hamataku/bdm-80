@@ -20,6 +20,8 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <gui/setting_screen/SettingView.hpp>
 #include <gui/setting_screen/SettingPresenter.hpp>
+#include <gui/transfer_screen/TransferView.hpp>
+#include <gui/transfer_screen/TransferPresenter.hpp>
 
 
 /**
@@ -45,7 +47,8 @@ public:
     typedef touchgfx::meta::TypeList< LogoView,
             touchgfx::meta::TypeList< MainView,
             touchgfx::meta::TypeList< SettingView,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< TransferView,
+            touchgfx::meta::Nil > > >
             > GeneratedViewTypes;
 
     /**
@@ -60,7 +63,8 @@ public:
     typedef touchgfx::meta::TypeList< LogoPresenter,
             touchgfx::meta::TypeList< MainPresenter,
             touchgfx::meta::TypeList< SettingPresenter,
-            touchgfx::meta::Nil > >
+            touchgfx::meta::TypeList< TransferPresenter,
+            touchgfx::meta::Nil > > >
             > GeneratedPresenterTypes;
 
     /**

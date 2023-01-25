@@ -208,6 +208,18 @@
     <Filter Include="Header Files\generated\gui_generated\setting_screen">
       <UniqueIdentifier>09D11978-329B-9A2E-8F68-BC72021CB2F8</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\transfer_screen">
+      <UniqueIdentifier>BF5A30A0-D001-7756-B279-07797953738A</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\transfer_screen">
+      <UniqueIdentifier>B08BDCF8-C817-67ED-42C6-9F69D8CABBD6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\transfer_screen">
+      <UniqueIdentifier>13457E32-4537-6BE9-B7F2-D9361C3F70C7</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\transfer_screen">
+      <UniqueIdentifier>3B48CBCB-3529-6109-1BE5-852CED897C39</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -266,6 +278,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\setting_screen\SettingViewBase.cpp">
       <Filter>Source Files\generated\gui_generated\setting_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\transfer_screen\TransferPresenter.cpp">
+      <Filter>Source Files\gui\transfer_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\transfer_screen\TransferView.cpp">
+      <Filter>Source Files\gui\transfer_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\transfer_screen\TransferViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\transfer_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -735,6 +756,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\setting_screen\SettingViewBase.hpp">
       <Filter>Header Files\generated\gui_generated\setting_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\transfer_screen\TransferPresenter.hpp">
+      <Filter>Header Files\gui\transfer_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\transfer_screen\TransferView.hpp">
+      <Filter>Header Files\gui\transfer_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\transfer_screen\TransferViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\transfer_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

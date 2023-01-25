@@ -105,6 +105,12 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp \
+ ../../TouchGFX/gui/include/gui/transfer_screen/TransferView.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/transfer_screen/TransferViewBase.hpp \
+ ../../TouchGFX/gui/include/gui/transfer_screen/TransferPresenter.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Paint.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp
@@ -318,6 +324,18 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Slider.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextAreaWithWildcard.hpp:
+
+../../TouchGFX/gui/include/gui/transfer_screen/TransferView.hpp:
+
+../../TouchGFX/generated/gui_generated/include/gui_generated/transfer_screen/TransferViewBase.hpp:
+
+../../TouchGFX/gui/include/gui/transfer_screen/TransferPresenter.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/BoxProgress.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractDirectionProgress.hpp:
+
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/progress_indicators/AbstractProgressIndicator.hpp:
 
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/PaintRGB565Impl.hpp:
 

@@ -31,6 +31,8 @@ CPP_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 Application/User/Core \
+Application/User/FATFS/App \
+Application/User/FATFS/Target \
 Application/User/Startup \
 Application/User/TouchGFX/App \
 Application/User/TouchGFX/target \
@@ -41,6 +43,7 @@ Application/User/generated \
 Application/User/gui \
 Drivers/CMSIS \
 Drivers/STM32F4xx_HAL_Driver \
+Middlewares/FatFs \
 Middlewares/USB_Device_Library \
 Src \
 

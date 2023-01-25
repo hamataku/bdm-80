@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include Src/subdir.mk
 -include Middlewares/USB_Device_Library/subdir.mk
+-include Middlewares/FatFs/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/subdir.mk
 -include Drivers/CMSIS/subdir.mk
 -include Application/User/gui/subdir.mk
@@ -21,6 +22,8 @@ RM := rm -rf
 -include Application/User/TouchGFX/target/subdir.mk
 -include Application/User/TouchGFX/App/subdir.mk
 -include Application/User/Startup/subdir.mk
+-include Application/User/FATFS/Target/subdir.mk
+-include Application/User/FATFS/App/subdir.mk
 -include Application/User/Core/subdir.mk
 -include objects.mk
 

@@ -26,6 +26,7 @@ protected:
 #ifndef SIMULATOR
     void dma_exec();
     void update() override;
+    void file_upload_check_callback() override;
 
     void b0_callback() override
     {

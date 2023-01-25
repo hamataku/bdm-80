@@ -6,6 +6,87 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_VVTZ" Alignment="Left" TypographyId="Medium">
+        <Translation Language="GB">File Transfer</Translation>
+      </Text>
+      <Text Id="__SingleUse_QEKA" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">STEP</Translation>
+      </Text>
+      <Text Id="__SingleUse_KSE9" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">WRITE&#10;INCR</Translation>
+      </Text>
+      <Text Id="__SingleUse_8PX4" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">READ&#10;DECR</Translation>
+      </Text>
+      <Text Id="__SingleUse_BWFS" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">READ&#10;INCR</Translation>
+      </Text>
+      <Text Id="__SingleUse_DFI2" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">ADRS&#10;SET</Translation>
+      </Text>
+      <Text Id="__SingleUse_GHMU" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RESET</Translation>
+      </Text>
+      <Text Id="__SingleUse_XMTE" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">LOAD</Translation>
+      </Text>
+      <Text Id="__SingleUse_IT2V" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">STORE</Translation>
+      </Text>
+      <Text Id="__SingleUse_MJC7" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RUN</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y3NU" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">RET</Translation>
+      </Text>
+      <Text Id="__SingleUse_WYDR" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_1QE7" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">1</Translation>
+      </Text>
+      <Text Id="__SingleUse_YB6H" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_JAV5" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_33ZW" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_TO93" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_8DMJ" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_3737" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_VZA6" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_863W" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_AWGN" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">A</Translation>
+      </Text>
+      <Text Id="__SingleUse_BV3L" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">B</Translation>
+      </Text>
+      <Text Id="__SingleUse_SFGB" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">C</Translation>
+      </Text>
+      <Text Id="__SingleUse_GZ0G" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">D</Translation>
+      </Text>
+      <Text Id="__SingleUse_4QKZ" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">E</Translation>
+      </Text>
+      <Text Id="__SingleUse_483C" Alignment="Center" TypographyId="Normal">
+        <Translation Language="GB">F</Translation>
+      </Text>
       <Text Id="__SingleUse_GC5Q" Alignment="Left" TypographyId="Medium">
         <Translation Language="GB">1</Translation>
       </Text>

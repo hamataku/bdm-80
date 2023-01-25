@@ -1,6 +1,6 @@
                         ; --------------------------------------
                         ; zasm: assemble "main.asm"
-                        ; date: 2023-01-19 17:29:52
+                        ; date: 2023-01-24 16:57:52
                         ; --------------------------------------
 
 
@@ -5242,5 +5242,5 @@ _end    = $2122 =  8482          main.asm:28 (unused)
 _size   = $2122 =  8482          main.asm:28 (unused)
 
 
-total time: 7.4972 sec.
+total time: 3.0086 sec.
 no errors

@@ -1,9 +1,10 @@
 Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 SettingView.hpp:11:13:SettingView::~SettingView()	0	static
-SettingView.cpp:20:6:virtual void SettingView::tearDownScreen()	0	static
-SettingView.cpp:13:6:virtual void SettingView::setupScreen()	16	static
-SettingView.cpp:25:6:virtual void SettingView::slider_callback(int)	16	static
-SettingView.cpp:33:6:virtual void SettingView::slider_release_callback(int)	0	static
+SettingView.cpp:21:6:virtual void SettingView::tearDownScreen()	0	static
+SettingView.cpp:14:6:virtual void SettingView::setupScreen()	16	static
+SettingView.cpp:26:6:virtual void SettingView::slider_callback(int)	16	static
+SettingView.cpp:34:6:virtual void SettingView::slider_release_callback(int)	0	static
+SettingView.cpp:40:6:virtual void SettingView::demo_callback()	0	static,ignoring_inline_asm
 SettingView.hpp:11:13:virtual SettingView::~SettingView()	8	static
-SettingView.cpp:9:1:SettingView::SettingView()	8	static
+SettingView.cpp:10:1:SettingView::SettingView()	8	static

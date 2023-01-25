@@ -4,6 +4,7 @@
 
 #ifndef SIMULATOR
 #include "usart.h"
+#include "fatfs.h"
 #endif
 
 char receive[64];
@@ -42,6 +43,20 @@ void MainView::update()
         address_current = address;
         printf("P%x\n", address);
     }
+}
+
+void MainView::file_upload_check_callback()
+{
+    printf("check\n");
+
+    FRESULT fr;
+    FIL file;
+    fr = f_open(&file, "0:MAIN.ROM", FA_READ);
+    printf("%d\n", (int16_t)fr);
+    if (fr != FR_OK)
+        return;
+
+    static_cast<FrontendApplication*>(Application::getInstance())->handleKeyEvent(0);
 }
 
 void MainView::dma_exec()

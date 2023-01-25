@@ -15,6 +15,8 @@
 #include <gui/main_screen/MainPresenter.hpp>
 #include <gui/setting_screen/SettingView.hpp>
 #include <gui/setting_screen/SettingPresenter.hpp>
+#include <gui/transfer_screen/TransferView.hpp>
+#include <gui/transfer_screen/TransferPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -81,4 +83,17 @@ void FrontendApplicationBase::gotoSettingScreenNoTransition()
 void FrontendApplicationBase::gotoSettingScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<SettingView, SettingPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// Transfer
+
+void FrontendApplicationBase::gotoTransferScreenNoTransition()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoTransferScreenNoTransitionImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoTransferScreenNoTransitionImpl()
+{
+    touchgfx::makeTransition<TransferView, TransferPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

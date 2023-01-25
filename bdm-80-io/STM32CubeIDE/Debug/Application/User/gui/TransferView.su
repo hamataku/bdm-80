@@ -1,0 +1,10 @@
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+TransferViewBase.hpp:30:18:virtual void TransferViewBase::slider_callback(int)	0	static
+TransferViewBase.hpp:35:18:virtual void TransferViewBase::slider_release_callback(int)	0	static
+TransferViewBase.hpp:40:18:virtual void TransferViewBase::demo_callback()	0	static
+TransferView.hpp:11:13:TransferView::~TransferView()	0	static
+TransferView.cpp:13:6:virtual void TransferView::tearDownScreen()	0	static
+TransferView.cpp:8:6:virtual void TransferView::setupScreen()	0	static
+TransferView.hpp:11:13:virtual TransferView::~TransferView()	8	static
+TransferView.cpp:3:1:TransferView::TransferView()	8	static

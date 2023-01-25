@@ -1,6 +1,10 @@
-Src/tm1630.o: ../Src/tm1630.c \
- C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h \
- ../../Core/Inc/main.h \
+Application/User/USB_DEVICE/App/usbd_storage_if.o: \
+ C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_storage_if.c \
+ C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_storage_if.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_bot.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
+ ../../USB_DEVICE/Target/usbd_conf.h ../../Core/Inc/main.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  ../../Core/Inc/stm32f4xx_hal_conf.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -34,9 +38,23 @@ Src/tm1630.o: ../Src/tm1630.c \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h \
  ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h \
- ../../Core/Inc/gpio.h ../../Core/Inc/main.h
+ ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h
 
-C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
+C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_storage_if.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_bot.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
+
+../../USB_DEVICE/Target/usbd_conf.h:
 
 ../../Core/Inc/main.h:
 
@@ -106,6 +124,16 @@ C:/Users/denjo/eeic/bdm-80/bdm-80-io/STM32CubeIDE/Include/tm1630.h:
 
 ../../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h:
 
-../../Core/Inc/gpio.h:
+../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
 
-../../Core/Inc/main.h:
+../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:

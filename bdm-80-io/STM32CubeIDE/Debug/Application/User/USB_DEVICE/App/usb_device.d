@@ -42,9 +42,11 @@ Application/User/USB_DEVICE/App/usb_device.o: \
  ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h \
  C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_desc.h \
- ../../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_bot.h \
+ ../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h \
  ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
- C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_cdc_if.h
+ C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_storage_if.h
 
 C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usb_device.h:
 
@@ -132,8 +134,12 @@ C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usb_device.h:
 
 C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_desc.h:
 
-../../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h:
+../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_bot.h:
+
+../../Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc/usbd_msc_scsi.h:
 
 ../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h:
 
-C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_cdc_if.h:
+C:/Users/denjo/eeic/bdm-80/bdm-80-io/USB_DEVICE/App/usbd_storage_if.h:

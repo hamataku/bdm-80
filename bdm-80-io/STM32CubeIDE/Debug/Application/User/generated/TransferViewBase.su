@@ -1,0 +1,36 @@
+Drawable.hpp:147:23:virtual touchgfx::Drawable* touchgfx::Drawable::getFirstChild()	0	static
+Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	0	static
+Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	0	static
+Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	0	static
+Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	0	static
+Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	0	static
+Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	0	static
+Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	0	static
+Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
+Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	8	static
+Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	4	static
+Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	0	static
+Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
+Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
+AbstractButton.hpp:86:18:virtual bool touchgfx::AbstractButton::getPressedState() const	0	static
+TransferViewBase.hpp:23:13:TransferViewBase::~TransferViewBase()	0	static
+TransferViewBase.hpp:30:18:virtual void TransferViewBase::slider_callback(int)	0	static
+TransferViewBase.hpp:35:18:virtual void TransferViewBase::slider_release_callback(int)	0	static
+TransferViewBase.hpp:40:18:virtual void TransferViewBase::demo_callback()	0	static
+TransferViewBase.cpp:263:6:virtual void TransferViewBase::handleTickEvent()	0	static
+TransferViewBase.cpp:276:6:void TransferViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	0	static
+Callback.hpp:357:8:touchgfx::Callback<TransferViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
+ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::ButtonWithLabel>::~ClickListener()	0	static
+Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = TransferViewBase; T1 = const touchgfx::AbstractButton&]	8	static
+Callback.hpp:396:18:bool touchgfx::Callback<dest_type, T1, void, void>::isValid() const [with dest_type = TransferViewBase; T1 = const touchgfx::AbstractButton&]	0	static
+TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
+ClickListener.hpp:33:7:virtual touchgfx::ClickListener<touchgfx::ButtonWithLabel>::~ClickListener()	8	static
+Callback.hpp:357:8:virtual touchgfx::Callback<TransferViewBase, const touchgfx::AbstractButton&>::~Callback()	8	static
+TransferViewBase.hpp:23:13:virtual TransferViewBase::~TransferViewBase()	8	static
+TransferViewBase.cpp:246:6:virtual void TransferViewBase::setupScreen()	24	static
+Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	0	static
+ClickListener.hpp:49:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ButtonWithLabel]	16	static
+AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	16	static
+TransferViewBase.cpp:9:1:TransferViewBase::TransferViewBase()	208	static

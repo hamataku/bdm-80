@@ -31,6 +31,9 @@ public:
     // Setting
     void gotoSettingScreenNoTransition();
 
+    // Transfer
+    void gotoTransferScreenNoTransition();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -46,6 +49,9 @@ protected:
 
     // Setting
     void gotoSettingScreenNoTransitionImpl();
+
+    // Transfer
+    void gotoTransferScreenNoTransitionImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

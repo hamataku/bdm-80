@@ -11,38 +11,38 @@ Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	8	
 Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	4	static
 Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
 Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	0	static
-Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
 Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
 TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
 AbstractButton.hpp:86:18:virtual bool touchgfx::AbstractButton::getPressedState() const	0	static
 MainViewBase.hpp:21:13:MainViewBase::~MainViewBase()	0	static
-MainViewBase.hpp:28:18:virtual void MainViewBase::b0_callback()	0	static
-MainViewBase.hpp:33:18:virtual void MainViewBase::b1_callback()	0	static
-MainViewBase.hpp:38:18:virtual void MainViewBase::b2_callback()	0	static
-MainViewBase.hpp:43:18:virtual void MainViewBase::b3_callback()	0	static
-MainViewBase.hpp:48:18:virtual void MainViewBase::b4_callback()	0	static
-MainViewBase.hpp:53:18:virtual void MainViewBase::b5_callback()	0	static
-MainViewBase.hpp:58:18:virtual void MainViewBase::b6_callback()	0	static
-MainViewBase.hpp:63:18:virtual void MainViewBase::b8_callback()	0	static
-MainViewBase.hpp:68:18:virtual void MainViewBase::b9_callback()	0	static
-MainViewBase.hpp:73:18:virtual void MainViewBase::ba_callback()	0	static
-MainViewBase.hpp:78:18:virtual void MainViewBase::bb_callback()	0	static
-MainViewBase.hpp:83:18:virtual void MainViewBase::bc_callback()	0	static
-MainViewBase.hpp:88:18:virtual void MainViewBase::bd_callback()	0	static
-MainViewBase.hpp:93:18:virtual void MainViewBase::be_callback()	0	static
-MainViewBase.hpp:98:18:virtual void MainViewBase::bf_callback()	0	static
-MainViewBase.hpp:103:18:virtual void MainViewBase::b7_callback()	0	static
-MainViewBase.hpp:108:18:virtual void MainViewBase::ret_callback()	0	static
-MainViewBase.hpp:113:18:virtual void MainViewBase::run_callback()	0	static
-MainViewBase.hpp:118:18:virtual void MainViewBase::store_callback()	0	static
-MainViewBase.hpp:123:18:virtual void MainViewBase::load_callback()	0	static
-MainViewBase.hpp:128:18:virtual void MainViewBase::reset_callback()	0	static
-MainViewBase.hpp:133:18:virtual void MainViewBase::adrs_callback()	0	static
-MainViewBase.hpp:138:18:virtual void MainViewBase::read_incr_callback()	0	static
-MainViewBase.hpp:143:18:virtual void MainViewBase::read_decr_callback()	0	static
-MainViewBase.hpp:148:18:virtual void MainViewBase::write_incr_callback()	0	static
-MainViewBase.hpp:153:18:virtual void MainViewBase::update()	0	static
-MainViewBase.cpp:239:6:virtual void MainViewBase::setupScreen()	0	static
+MainViewBase.hpp:29:18:virtual void MainViewBase::b0_callback()	0	static
+MainViewBase.hpp:34:18:virtual void MainViewBase::b1_callback()	0	static
+MainViewBase.hpp:39:18:virtual void MainViewBase::b2_callback()	0	static
+MainViewBase.hpp:44:18:virtual void MainViewBase::b3_callback()	0	static
+MainViewBase.hpp:49:18:virtual void MainViewBase::b4_callback()	0	static
+MainViewBase.hpp:54:18:virtual void MainViewBase::b5_callback()	0	static
+MainViewBase.hpp:59:18:virtual void MainViewBase::b6_callback()	0	static
+MainViewBase.hpp:64:18:virtual void MainViewBase::b8_callback()	0	static
+MainViewBase.hpp:69:18:virtual void MainViewBase::b9_callback()	0	static
+MainViewBase.hpp:74:18:virtual void MainViewBase::ba_callback()	0	static
+MainViewBase.hpp:79:18:virtual void MainViewBase::bb_callback()	0	static
+MainViewBase.hpp:84:18:virtual void MainViewBase::bc_callback()	0	static
+MainViewBase.hpp:89:18:virtual void MainViewBase::bd_callback()	0	static
+MainViewBase.hpp:94:18:virtual void MainViewBase::be_callback()	0	static
+MainViewBase.hpp:99:18:virtual void MainViewBase::bf_callback()	0	static
+MainViewBase.hpp:104:18:virtual void MainViewBase::b7_callback()	0	static
+MainViewBase.hpp:109:18:virtual void MainViewBase::ret_callback()	0	static
+MainViewBase.hpp:114:18:virtual void MainViewBase::run_callback()	0	static
+MainViewBase.hpp:119:18:virtual void MainViewBase::store_callback()	0	static
+MainViewBase.hpp:124:18:virtual void MainViewBase::load_callback()	0	static
+MainViewBase.hpp:129:18:virtual void MainViewBase::reset_callback()	0	static
+MainViewBase.hpp:134:18:virtual void MainViewBase::adrs_callback()	0	static
+MainViewBase.hpp:139:18:virtual void MainViewBase::read_incr_callback()	0	static
+MainViewBase.hpp:144:18:virtual void MainViewBase::read_decr_callback()	0	static
+MainViewBase.hpp:149:18:virtual void MainViewBase::write_incr_callback()	0	static
+MainViewBase.hpp:154:18:virtual void MainViewBase::update()	0	static
+MainViewBase.hpp:159:18:virtual void MainViewBase::file_upload_check_callback()	0	static
+MainViewBase.cpp:240:6:virtual void MainViewBase::setupScreen()	0	static
 Callback.hpp:357:8:touchgfx::Callback<MainViewBase, const touchgfx::AbstractButton&>::~Callback()	0	static
 ClickListener.hpp:33:7:touchgfx::ClickListener<touchgfx::ButtonWithLabel>::~ClickListener()	0	static
 Callback.hpp:386:18:void touchgfx::Callback<dest_type, T1, void, void>::execute(T1) [with dest_type = MainViewBase; T1 = const touchgfx::AbstractButton&]	8	static
@@ -53,7 +53,8 @@ Callback.hpp:357:8:virtual touchgfx::Callback<MainViewBase, const touchgfx::Abst
 MainViewBase.hpp:21:13:virtual MainViewBase::~MainViewBase()	8	static
 Button.hpp:84:18:virtual void touchgfx::Button::invalidateContent() const	0	static
 ClickListener.hpp:49:18:void touchgfx::ClickListener<T>::handleClickEvent(const touchgfx::ClickEvent&) [with T = touchgfx::ButtonWithLabel]	16	static
-MainViewBase.cpp:245:6:virtual void MainViewBase::handleTickEvent()	8	static
-MainViewBase.cpp:259:6:void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
+MainViewBase.cpp:271:6:virtual void MainViewBase::handleKeyEvent(uint8_t)	8	static
+MainViewBase.cpp:246:6:virtual void MainViewBase::handleTickEvent()	8	static
+MainViewBase.cpp:282:6:void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton&)	8	static
 AbstractButton.hpp:73:18:virtual void touchgfx::AbstractButton::executeAction()	16	static
 MainViewBase.cpp:9:1:MainViewBase::MainViewBase()	184	static

@@ -975,6 +975,28 @@
               "Type": "ActionCustom",
               "FunctionName": "update"
             }
+          },
+          {
+            "InteractionName": "file_upload",
+            "Trigger": {
+              "Type": "TriggerOnEveryTick",
+              "TickCount": 60
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "file_upload_check_callback"
+            }
+          },
+          {
+            "InteractionName": "transfer",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Transfer"
+            }
           }
         ]
       },
@@ -1702,6 +1724,729 @@
             "Action": {
               "Type": "ActionShow",
               "ActionComponent": "container1"
+            }
+          },
+          {
+            "InteractionName": "wait",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionDelay",
+              "Duration": 150
+            }
+          },
+          {
+            "InteractionName": "back",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "back"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "Main"
+            }
+          },
+          {
+            "InteractionName": "slider",
+            "Trigger": {
+              "Type": "TriggerSliderValueChanged",
+              "TriggerComponent": "slider1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "slider_callback"
+            }
+          },
+          {
+            "InteractionName": "slider_release",
+            "Trigger": {
+              "Type": "TriggerSliderValueConfirmed",
+              "TriggerComponent": "slider1"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "slider_release_callback"
+            }
+          },
+          {
+            "InteractionName": "demo",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "button_demo"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "demo_callback"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "Transfer",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 320,
+            "Height": 240,
+            "LockPosition": true,
+            "Color": {
+              "Red": 247,
+              "Green": 247,
+              "Blue": 247
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bf",
+            "X": 224,
+            "Y": 48,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_483C",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "be",
+            "X": 176,
+            "Y": 48,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_4QKZ",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bd",
+            "X": 128,
+            "Y": 48,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_GZ0G",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bc",
+            "X": 80,
+            "Y": 48,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_SFGB",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "bb",
+            "X": 224,
+            "Y": 96,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_BV3L",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "ba",
+            "X": 176,
+            "Y": 96,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_AWGN",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b9",
+            "X": 128,
+            "Y": 96,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_863W",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b8",
+            "X": 80,
+            "Y": 96,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_VZA6",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b7",
+            "X": 224,
+            "Y": 144,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_3737",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b6",
+            "X": 176,
+            "Y": 144,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_8DMJ",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b5",
+            "X": 128,
+            "Y": 144,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_TO93",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b4",
+            "X": 80,
+            "Y": 144,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_33ZW",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b3",
+            "X": 224,
+            "Y": 192,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_JAV5",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b2",
+            "X": 176,
+            "Y": 192,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue_pressed.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_YB6H",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b1",
+            "X": 128,
+            "Y": 192,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_1QE7",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "b0",
+            "X": 80,
+            "Y": 192,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "blue.png",
+            "Released": "blue.png",
+            "TextId": "__SingleUse_WYDR",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Clickable": true
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 80,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_Y3NU",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1",
+            "X": 128,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_MJC7",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1_1",
+            "X": 176,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_IT2V",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1_1_1",
+            "X": 224,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_XMTE",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1_1_1_1",
+            "X": 272,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_GHMU",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1_1_1_1_1",
+            "X": 272,
+            "Y": 48,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_DFI2",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1_1_1_1_1_1",
+            "X": 272,
+            "Y": 96,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_BWFS",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1_1_1_1_1_1_1",
+            "X": 272,
+            "Y": 144,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_8PX4",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1_1_1_1_1_1_1_1_1",
+            "X": 272,
+            "Y": 192,
+            "Width": 48,
+            "Height": 48,
+            "Pressed": "orange_pressed.png",
+            "Released": "orange.png",
+            "TextId": "__SingleUse_KSE9",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Button",
+            "Name": "button1",
+            "X": 13,
+            "Y": 201,
+            "Width": 30,
+            "Height": 30,
+            "Pressed": "__designer\\Blue_Icons_Settings_32.png",
+            "Released": "__designer\\Blue_Icons_Settings_32.png"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton1_1",
+            "X": 14,
+            "Y": 152,
+            "Width": 58,
+            "Height": 32,
+            "Pressed": "toggle_off.png",
+            "Released": "toggle_on.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 30,
+            "Y": 122,
+            "Width": 26,
+            "Height": 22,
+            "TextId": "__SingleUse_QEKA",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box2",
+            "Width": 320,
+            "Height": 240,
+            "Alpha": 110
+          },
+          {
+            "Type": "TextureMapper",
+            "Name": "textureMapper1",
+            "Width": 320,
+            "Height": 240,
+            "UseAnimation": true,
+            "RenderingAlgorithm": "Nearest-neighbor",
+            "FileNameImage": "popup.png",
+            "LockBitmapToCenter": true,
+            "XBitmapPosition": 36.0,
+            "YBitmapPosition": 36.0,
+            "Scale": 1.1,
+            "LockOrigoToCenter": true,
+            "XOrigo": 160.0,
+            "YOrigo": 120.0,
+            "ZOrigo": 1000.0,
+            "CameraDistance": 1000.0
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 115,
+            "Y": 57,
+            "Width": 91,
+            "Height": 31,
+            "TextId": "__SingleUse_VVTZ",
+            "TextRotation": "0",
+            "AutoSize": true
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "boxProgress1",
+            "X": 72,
+            "Y": 120,
+            "Width": 184,
+            "Height": 20,
+            "Color": {
+              "Green": 151,
+              "Blue": 255
+            },
+            "Direction": "Right",
+            "Style": "Style3",
+            "FileNameBackground": "__designer\\Blue_ProgressIndicators_bg_medium_progress_indicator_bg_square_0_degrees.png",
+            "IndicatorPositionX": 2,
+            "IndicatorPositionY": 2,
+            "IndicatorPositionWidth": 180,
+            "IndicatorPositionHeight": 16,
+            "ProgressRangeMax": 100
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "resize",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerScreenTransitionBegins"
+            },
+            "Action": {
+              "Type": "ActionScaleTextureMapper",
+              "Scale": 1.1,
+              "Easing": "Linear",
+              "EasingOption": "In",
+              "Duration": 150,
+              "ActionComponent": "textureMapper1"
             }
           },
           {

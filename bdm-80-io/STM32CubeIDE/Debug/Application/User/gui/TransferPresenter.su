@@ -1,0 +1,6 @@
+TransferPresenter.hpp:28:13:TransferPresenter::~TransferPresenter()	0	static
+TransferPresenter.cpp:10:6:virtual void TransferPresenter::activate()	0	static
+TransferPresenter.hpp:28:13:virtual TransferPresenter::~TransferPresenter()	8	static
+TransferPresenter.hpp:28:13:virtual void* TransferPresenter::_ZThn4_N17TransferPresenterD1Ev()	0	static
+TransferPresenter.hpp:28:13:virtual void* TransferPresenter::_ZThn4_N17TransferPresenterD0Ev()	16	static
+TransferPresenter.cpp:4:1:TransferPresenter::TransferPresenter(TransferView&)	8	static

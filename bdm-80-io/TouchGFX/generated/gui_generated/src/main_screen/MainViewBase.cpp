@@ -8,6 +8,7 @@
 
 MainViewBase::MainViewBase() :
     frameCountupdateInterval(0),
+    frameCountfile_uploadInterval(0),
     buttonCallback(this, &MainViewBase::buttonCallbackHandler)
 {
 
@@ -254,6 +255,28 @@ void MainViewBase::handleTickEvent()
         frameCountupdateInterval = 0;
     }
 
+    frameCountfile_uploadInterval++;
+    if(frameCountfile_uploadInterval == TICK_FILE_UPLOAD_INTERVAL)
+    {
+        //file_upload
+        //When every N tick call virtual function
+        //Call file_upload_check_callback
+        file_upload_check_callback();
+        frameCountfile_uploadInterval = 0;
+    }
+
+}
+
+//Handles when a key is pressed
+void MainViewBase::handleKeyEvent(uint8_t key)
+{
+    if(0 == key)
+    {
+        //transfer
+        //When hardware button 0 clicked change screen to Transfer
+        //Go to Transfer with no screen transition
+        application().gotoTransferScreenNoTransition();
+    }
 }
 
 void MainViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
